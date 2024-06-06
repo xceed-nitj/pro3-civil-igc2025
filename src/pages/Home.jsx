@@ -8,7 +8,7 @@ import AboutNews from "../components/AboutNews";
 import SponsorShip from "../components/Sponsorship";
 import { useEffect } from "react";
 import Slider from "../components/Slider";
-import SecNavbar from "../components/SecNavbar";
+
 import Navbar from "../components/Navbar"
 // import AboutNews from "./components/Dummy";
 function Home(props) {
@@ -17,10 +17,10 @@ function Home(props) {
   }, []);
   return (
     <>
-    <div className="fixed top-0 w-screen z-40 ">
+    <div className=" top-0 w-screen z-40 ">
         <Navbar />
       </div>
-      <SecNavbar />
+      
     
       <HeroSection confid={props.confId} />
       <AboutNews confid={props.confId} />

@@ -1,6 +1,6 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import SecNavbar from '../components/SecNavbar'
+
 import axios from "axios";
 import { useState,useEffect } from 'react';
 import getEnvironment from "../getenvironment";
@@ -23,10 +23,10 @@ function Committee(props) {
     }, []);
     return (
         <>
-            <div className="fixed top-0 w-screen z-40 "> 
+            <div className="top-0 w-screen z-40 "> 
       <Navbar />      
       </div>
-      <SecNavbar/>
+      
       <div className=" bg-white container max-w-7xl mx-auto px-5 sm:px-10 min-h-[300px] lg:px-8 pt-[58px] lg:pt-[10px] pb-5">
       {data.map((item) => (
 

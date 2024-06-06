@@ -8,13 +8,13 @@ import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
 import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
-import ParticlesComponent from "./components/Particle";
+
 import './App.css'
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
     <>
-    <ParticlesComponent id="particle" />
+    
 
 <div id="content ">
       < Routes >
