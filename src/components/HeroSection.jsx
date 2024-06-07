@@ -1,278 +1,85 @@
-import { useEffect, useState } from "react";
-import gsap from "gsap";
-import axios from "axios";
-import formatDate from "../utility/formatDate";
-import getEnvironment from "../getenvironment";
+import { useState, useEffect } from 'react';
+import 'tailwindcss/tailwind.css';
 
-function HeroSection(props) {
-  const confid = props.confid;
-  const [data, setData] = useState(null);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-  const apiUrl = getEnvironment();
-
-  useEffect(() => {
-    const animation = () => {
-      let tl = gsap.timeline();
-      let tl2 = gsap.timeline();
-      let tl3 = gsap.timeline();
-      let tl4 = gsap.timeline();
-      let tl5 = gsap.timeline();
-      let tween = tl.fromTo(
-        ".main",
-        {
-          x: 600,
-          y: 600,
-
-        },
-        {
-          x: 0,
-          y: 0,
-
-          duration: 3.5,
-          stagger: 7,
-          opacity: 1,
-          ease: "sine.out",
-        }
-      );
-
-      let tween2 = tl2.fromTo(
-        ".main",
-        { x: 0, y: 0, zIndex: -1 },
-        {
-          x: -600,
-          y: -600,
-          duration: 3.5,
-          stagger: 7,
-          opacity: 0,
-          delay: 7,
-          ease: "sine.out",
-        }
-      );
-
-      let tween3 = tl3.fromTo(
-        ".main2",
-        {
-          opacity: 0,
-          x: 600,
-          y: 600,
-
-        },
-        {
-          x: 0,
-          y: 0,
-          duration: 3.5,
-          stagger: 7,
-          opacity: 1,
-          ease: "sine.out",
-          delay: 21,
-
-        }
-      );
-
-      let tween4 = tl4.to(".main2", {
-        x: -600,
-        y: -600,
-        duration: 3.5,
-        stagger: 7,
-        opacity: 1,
-        delay: 28,
-        ease: "sine.out",
-      });
-
-      let tween5 = tl5.to("main", { opacity: 0, duration: 0.5 });
-
-      tween.seek(0);
-      tween2.seek(0);
-      tween5.play();
-      tween3.seek(0);
-      tween4.seek(0);
-    };
-
-    animation();
-    setInterval(() => {
-      animation();
-    }, 49000);
-  }, []);
+const HeroSection = () => {
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const photos = [
+    'https://cgu-odisha.ac.in/wp-content/uploads/2023/05/diversityandinclusionincivilengineering3.jpg',
+    'https://st.depositphotos.com/1154952/4624/i/450/depositphotos_46247795-stock-photo-engineer-working-table-plan-home.jpg',
+    'https://storables.com/wp-content/uploads/2023/11/why-is-it-called-civil-engineering-1699953005.jpg'
+  ];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-
-    axios
-      .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        setData(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, [apiUrl, confid]);
+    const interval = setInterval(() => {
+      setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [photos.length]);
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
-        <div className=" flex flex-col items-center md:items-start justify-center z-20 py-5 gap-4 ">
-          <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
-            {data ? data.confName : " "}{" "}
-          </p>
-
-          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
-            {data ? data.shortName : " "}{" "}
-          </p>
-
-          <h3 className="bg-white  mx-auto font-bold text-center tracking-wide  lg:text-xl">
-            Role of Chemical Engineering towards Sustainable Development and
-            Atmanirbhar bharat
-          </h3>
-
-          <h4 className="bg-white  text-accent-500 mx-auto font-bold text-center md:text-left text-md ">
-            {" "}
-            {data
-              ? formatDate(data.confStartDate) +
-              " to " +
-              formatDate(data.confEndDate)
-              : " "}
-          </h4>
-          <p className=" mx-auto">
-            <p className="bg-white  mx-auto font-semibold text-center  ">Organized by</p>
-            <h4 className="bg-white  mx-auto font-bold  text-xl text-center md:text-center ">
-              <p> Indian Institute of Chemical Engineers</p>
-              <p> Doaba Regional Centre</p> <p>NIT Jalandhar</p>
-            </h4>
-          </p>
-          <div className="bg-white  flex flex-col md:flex-row   gap-4 items-center">
-            <div className="flex flex-col justify-center items-center max-w-[300px]">
-              <p className="  font-semibold text-center md:text-left ">
-                77<sup>th </sup>Annual Session
-              </p>
-              <img src="/logo77th.jpg" className=" w-16 md:w-20 " alt="" />
-
-              <p className=" font-bold text-center ">
-                Indian Institute Of Chemical Engineers
-              </p>
-            </div>
-            <div className="flex flex-col justify-center  max-w-[300px] items-center">
-              <p className=" font-semibold text-center md:text-left ">
-                Organized At
-              </p>
-              <img src="/logo.png" className=" w-16 md:w-20 " alt="" />
-
-              <p className=" font-bold text-center ">
-                Dr. B R Ambedkar National Institute of Technology, Jalandhar
-              </p>
-            </div>
-          </div>
-          {/* <section className="mt-8 lg:mt-14 text-stone-900 text-center md:text-left">
-            <h1 className="lg:text-5xl text-3xl  font-bold">
-              IIChE ChemCon 2024
-            </h1>
-            <div className="space-y-4 mt-6 lg:mt-10">
-              <p className="lg:text-xl text-lg font-medium">
-
-
-              </p>
-
-            </div>
-          </section> */}
-          <a
-            href="https://forms.gle/WVn4xut9xZCrsXLi7" target="_blank" rel="noopener noreferrer"
-            className="mt-3 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
-          >
-            Register
-          </a>
+    <div className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10 ml-4" style={{ backgroundImage: "url('/background.png')" }}>
+      <div className="info md:flex md:flex-col">
+        <p className="date text-pink-600 font-semibold text-4xl md:text-5xl" style={{ fontFamily: 'Inter' }}>DECEMBER 27-30, 2025 | NITJ</p>
+        <p className="ii text-5xl md:text-6xl font-bold" style={{ fontFamily: 'Inter' }}>IIChE</p>
+        <p className="chem text-7xl md:text-9xl font-bold" style={{ fontFamily: 'Inter' }}>CIVILCON</p>
+        <p className="ii text-5xl md:text-6xl font-bold" style={{ fontFamily: 'Inter' }}>2025</p>
+        <div className="info0 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-4 text-center rounded-full mt-2 md:mt-4 max-w-[500px] mx-auto md:mx-0" style={{ fontFamily: 'Inter' }}>
+          <p className="text-lg md:text-2xl">Role of Chemical Engineering towards Development and Atmanirbhar bharat</p>
         </div>
-
-        <div className="relative h-full w-full p-[0%] min-h-[20rem] top-10 overflow-hidden">
-          <div className="h-full w-full relative">
-            <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-40  rounded-lg" />
-                <img
-                  src="/main.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-30  rounded-lg" />
-                <img
-                  src="/side-1.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-20  rounded-lg" />
-                <img
-                  src="/side-2.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-20  rounded-lg" />
-                <img
-                  src="/side-3.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="opacity-0 absolute main2 grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-40  rounded-lg" />
-                <img
-                  src="/main.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-30  rounded-lg" />
-                <img
-                  src="/side-1.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-20  rounded-lg" />
-                <img
-                  src="/side-2.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg `}
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
-              <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-20  rounded-lg" />
-                <img
-                  src="/side-3.webp"
-                  className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className="organi md:flex md:flex-row md:items-center md:mt-2 md:space-y-2 md:space-x-0 ml-4">
+        <p className="by font-light" style={{ fontFamily: 'Inter' }}>Organized by:</p>
+        <div className="ml-4 flex flex-col justify-center">
+          <p className="iic font-semibold" style={{ fontFamily: 'Inter' }}>Indian Institute of Chemical Engineers,<br /><span>Doaba Regional Centre NIT JALANDHAR</span></p>
         </div>
+      </div>
+
+      <div className="bg-white flex flex-col md:flex-row gap-2 md:gap-4 items-center max-w-[600px] mx-auto ml-10">
+        <div className="flex flex-col justify-center items-center max-w-[700px]">
+          <p className="font-semibold text-center md:text-left" style={{ fontFamily: 'Inter' }}>
+            77<sup>th</sup> Annual Session
+          </p>
+          <img src="/logo77th.jpg" className="w-12 md:w-16" alt="" />
+          <p className="font-bold text-center" style={{ fontFamily: 'Inter' }}>
+            Indian Institute Of Chemical Engineers
+          </p>
         </div>
-    </>
+        <div className="flex flex-col justify-center max-w-[500px] items-center " style={{ fontFamily: 'Inter' }}>
+          <p className="font-semibold text-center md:text-left">
+            <br />
+            Organized At
+          </p>
+          <img src="/logo.png" className="w-12 md:w-16" alt="" />
+          <p className="font-bold text-center" style={{ fontFamily: 'Inter' }}>
+            Dr. B R Ambedkar National Institute of Technology, Jalandhar
+          </p>
+        </div>
+      </div>
+
+      <div className="button flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2 ml-20">
+        <div className="register bg-purple-700 text-white p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12" style={{ fontFamily: 'Inter' }}>Register</div>
+        <div className="view bg-white text-purple-700 border border-purple-700 p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12" style={{ fontFamily: 'Inter' }}>View Details</div>
+      </div>
+
+      <div className="contact1 flex items-center absolute text-white bottom-14 md:bottom-20 right-6 md:right-10 space-x-2">
+        <FontAwesomeIcon icon={faPhone} />
+        <p>+9888895253</p>
+      </div>
+
+      <div className="contact2 flex items-center text-white absolute bottom-4 md:bottom-10 right-6 md:right-10 space-x-2">
+        <FontAwesomeIcon icon={faEnvelope} />
+        <p>chemcon2024@gmail.com</p>
+      </div>
+
+      <div className="photo-animation absolute top-32 md:top-20 right-8 md:right-10 w-80 h-80 md:w-96 md:h-96 rounded-full shadow-lg overflow-hidden">
+        <img src={photos[currentPhotoIndex]} alt="Photo" className="w-full h-full object-cover rounded-full transition-opacity duration-500 ease-in-out" />
+      </div>
+
+    </div>
   );
-}
+};
 
 export default HeroSection;
