@@ -37,9 +37,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="bg-white flex flex-col md:flex-row gap-2 md:gap-4 items-center max-w-[600px] mx-auto ml-10">
+      <div className="bg-white flex flex-col md:flex-row gap-2 md:gap-4 items-center max-w-[600px] mx-auto ml-10  bg-transparent">
         <div className="flex flex-col justify-center items-center max-w-[700px]">
           <p className="font-semibold text-center md:text-left" style={{ fontFamily: 'Inter' }}>
+            <br />
             77<sup>th</sup> Annual Session
           </p>
           <img src="/logo77th.jpg" className="w-12 md:w-16" alt="" />
@@ -60,8 +61,8 @@ const HeroSection = () => {
       </div>
 
       <div className="button flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2 ml-20">
-        <div className="register bg-purple-700 text-white p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12" style={{ fontFamily: 'Inter' }}>Register</div>
-        <div className="view bg-white text-purple-700 border border-purple-700 p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12" style={{ fontFamily: 'Inter' }}>View Details</div>
+        <div className="register bg-purple-700  px-5 text-white p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12 text-2xl" style={{ fontFamily: 'Inter' }}>Register</div>
+        <div className="view bg-white text-purple-700 py-3 border border-purple-700 p-2 md:p-4 rounded-lg flex justify-center items-center hover:scale-110 transition-transform ml-12 text-xl" style={{ fontFamily: 'Inter' }}>View Details</div>
       </div>
 
       <div className="contact1 flex items-center absolute text-white bottom-14 md:bottom-20 right-6 md:right-10 space-x-2">
@@ -78,7 +79,7 @@ const HeroSection = () => {
         <img src={photos[currentPhotoIndex]} alt="Photo" className="w-full h-full object-cover rounded-full transition-opacity duration-500 ease-in-out" />
       </div>
 
-    </div>
+ </div>
   );
 };
 
