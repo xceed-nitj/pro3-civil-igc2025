@@ -58,7 +58,7 @@ const NavLinks = ({ onClose }) => {
       <div className="mt-0 md:mt-0">
         <NavLink
           to="/registration"
-          className={`${activeStyleCallback} text-white bg-pink-500 text-center p-5 rounded-md transition-transform transform hover:scale-110`}
+          className={`${activeStyleCallback} text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110`}
           onClick={onClose}
         >
           REGISTER
@@ -93,7 +93,7 @@ const Nav = () => {
           <img
             src="logonav.png"
             alt="Logo"
-            className="w-10 h-10 md:w-16 md:h-16 mr-4 bg-transparent mt-0"
+            className="w-5 h-5 md:w-10 md:h-10 mr-4 bg-transparent mt-0"
           />
         </div>
         <div className="flex flex-1 md:hidden justify-end">
