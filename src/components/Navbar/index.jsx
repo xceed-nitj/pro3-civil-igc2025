@@ -58,7 +58,7 @@ const NavLinks = ({ onClose }) => {
       <div className="mt-0 md:mt-0">
         <NavLink
           to="/registration"
-          className={`${activeStyleCallback} text-white bg-pink-500 text-center p-5 rounded-md transition-transform transform hover:scale-110`}
+          className={`${activeStyleCallback} text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110`}
           onClick={onClose}
         >
           REGISTER
