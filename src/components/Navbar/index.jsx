@@ -9,7 +9,7 @@ const activeStyleCallback = ({ isActive }) =>
 
 const NavLinks = ({ onClose }) => {
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-6">
       <NavLink
         to="/"
         className={activeStyleCallback}
@@ -84,18 +84,18 @@ const Nav = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 p-4 z-10 flex items-center">
+      <div className="absolute top-0 left-0 p-4 z-10 flex items-center w-full">
         <img
           src="logonav.png"
           alt="Logo"
           className="w-12 h-12 md:w-16 md:h-16 mr-6 bg-transparent"
         />
-        <nav className="flex flex-[1] items-center overflow-hidden">
+        <nav className="flex flex-1 items-center overflow-hidden">
           <div className="hidden md:flex space-x-6 ml-16">
             <NavLinks />
           </div>
         </nav>
-        <div className="md:hidden flex flex-[1] justify-end pr-4">
+        <div className="md:hidden flex flex-1 justify-end pr-4">
           <button onClick={toggleNavbar} className="p-2">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -104,11 +104,11 @@ const Nav = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ x: "-100%" }} // Change initial position to -100%
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }} // Change exit position to -100%
+            exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.5 }}
-            className="fixed top-0 left-0 w-72 md:w-80 h-full bg-white shadow-lg"
+            className="fixed top-0 left-0 w-72 md:w-80 h-full bg-white shadow-lg z-20"
           >
             <div className="p-4">
               <div className="flex justify-end mb-4">
