@@ -38,7 +38,9 @@ const HeroSection = () => {
           <br />
           Organized by:</p>
         <div className="ml-4 flex flex-col justify-center">
-          <p className="iic font-semibold">Indian Institute of Chemical Engineers,<br /><span>Doaba Regional Centre NIT JALANDHAR</span></p>
+          <p className="iic font-semibold">
+            <br />
+            Indian Institute of Chemical Engineers,<br /><span>Doaba Regional Centre NIT JALANDHAR</span></p>
         </div>
       </div>
 
