@@ -17,12 +17,15 @@ function Home(props) {
   }, []);
   return (
     <>
+    <div className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10  " style={{ backgroundImage: "url('/background.png')" }}>
+    
     <div className=" top-0 w-screen z-40 ">
         <Navbar />
       </div>
       
     
       <HeroSection confid={props.confId} />
+      </div>
       <AboutNews confid={props.confId} />
       <Slider confid={props.confId} />
       <Timeline confid={props.confId} />
