@@ -83,7 +83,7 @@ const Nav = () => {
   return (
     <>
       <nav className="bg-transparent fixed w-full z-10"></nav>
-      <div className="bg-transparent top-0 left-0 p-1 z-10 flex items-center w-full mb-4 md:mb-0">
+      <div className="bg-transparent top-0 left-0 p-0 z-10 flex items-center w-full">
         <div className="md:hidden flex items-center justify-start">
           <button onClick={toggleNavbar} className="p-2">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,7 +93,7 @@ const Nav = () => {
           <img
             src="logonav.png"
             alt="Logo"
-            className="w-5 h-5 md:w-10 md:h-10 mr-4 bg-transparent mt-0 mb-1"
+            className="w-5 h-5 md:w-10 md:h-10 mr-4 bg-transparent mt-0"
           />
         </div>
         <div className="flex flex-1 md:hidden justify-end">
