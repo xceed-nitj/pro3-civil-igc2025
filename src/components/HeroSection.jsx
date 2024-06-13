@@ -61,8 +61,8 @@ const HeroSection = () => {
         <FontAwesomeIcon icon={faEnvelope} />
         <p>chemcon2024@gmail.com</p>
       </div>
-      <div className="photo-animation absolute top-30 md:top-20 right-100 md:right-20 w-96 h-96 md:w-120 md:h-120 rounded-full shadow-lg overflow-hidden hidden md:block">
-  <img src={photos[currentPhotoIndex]} alt="Photo" className="w-50% h-full object-cover rounded-full transition-opacity duration-500 ease-in-out" />
+      <div className="photo-animation absolute top-30 md:top-20 right-100 md:right-60 w-96 h-96 md:w-160 md:h-160 rounded-full shadow-lg overflow-hidden hidden md:block">
+  <img src={photos[currentPhotoIndex]} alt="Photo" className="w-full h-full object-cover rounded-full transition-opacity duration-500 ease-in-out" />
 </div>
 
 
