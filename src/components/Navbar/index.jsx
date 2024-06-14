@@ -64,6 +64,14 @@ const NavLinks = ({ onClose }) => {
           REGISTER
         </NavLink>
       </div>
+      <div className="contact1 flex items-center absolute text-white right-2 top-5 md:flex">
+        <FontAwesomeIcon icon={faPhone} />
+        <p>+9888895253</p>
+      </div>
+      <div className="contact2 flex items-center text-white absolute right-2 top-10 mt-5 md:flex">
+        <FontAwesomeIcon icon={faEnvelope} />
+        <p>chemcon2024@gmail.com</p>
+      </div>
     </div>
   );
 };
