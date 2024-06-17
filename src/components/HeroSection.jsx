@@ -16,9 +16,8 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [photos.length]);
 
-  // Calculate the remaining time until the specified date
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2025-12-27T00:00:00"); // December 27, 2025
+    const targetDate = new Date("2025-12-27T00:00:00");
     const now = new Date();
     const difference = targetDate - now;
 
@@ -86,23 +85,43 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Countdown Timer */}
-      <div className="countdown-container mt-4 text-2xl text-white flex items-end absolute bottom-14 md:bottom-20 right-6 md:right-10 space-x-4 hidden md:flex" style={{backgroundColor: 'rgba(255, 192, 203, 0.6)', borderRadius: '10px', padding: '10px', maxWidth: '300px', paddingLeft: '10px', paddingRight: '10px'}}>
+      {/* Countdown Timer for Desktop */}
+      <div className="countdown-container mt-4 text-2xl text-white flex items-end absolute bottom-14 md:bottom-20 right-6 md:right-10 space-x-4 hidden md:flex" style={{backgroundColor: 'rgba(128, 0, 128, 0.6)', borderRadius: '10px', padding: '10px', maxWidth: '300px', paddingLeft: '10px', paddingRight: '10px'}}>
         <div className="countdown-item border-r border-white pr-4">
           <div className="font-semibold">{timeLeft.days}</div>
-          <div>Days</div>
+          <div className="text-xs">Days</div>
         </div>
         <div className="countdown-item border-r border-white pr-4">
           <div className="font-semibold">{timeLeft.hours}</div>
-          <div>Hrs</div>
+          <div className="text-xs">Hrs</div>
         </div>
         <div className="countdown-item border-r border-white pr-4">
           <div className="font-semibold">{timeLeft.minutes}</div>
-          <div>Mins</div>
+          <div className="text-xs">Mins</div>
         </div>
         <div className="countdown-item">
           <div className="font-semibold">{timeLeft.seconds}</div>
-          <div>Sec</div>
+          <div className="text-xs">Sec</div>
+        </div>
+      </div>
+
+      {/* Countdown Timer for Mobile */}
+      <div className="countdown-container-mobile md:hidden fixed top-80 right-0 mt-4 text-2xl text-white flex flex-col items-end" style={{backgroundColor: 'rgba(128, 0, 128, 0.6)', borderRadius: '10px', padding: '10px', paddingRight: '20px'}}>
+        <div className="countdown-item border-b border-white pb-2">
+          <div className="font-semibold">{timeLeft.days}</div>
+          <div className="text-xs">Days</div>
+        </div>
+        <div className="countdown-item border-b border-white pb-2">
+          <div className="font-semibold">{timeLeft.hours}</div>
+          <div className="text-xs">Hrs</div>
+        </div>
+        <div className="countdown-item border-b border-white pb-2">
+          <div className="font-semibold">{timeLeft.minutes}</div>
+          <div className="text-xs">Mins</div>
+        </div>
+        <div className="countdown-item">
+          <div className="font-semibold">{timeLeft.seconds}</div>
+          <div className="text-xs">Sec</div>
         </div>
       </div>
 
