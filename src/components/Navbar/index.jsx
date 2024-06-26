@@ -1,3 +1,4 @@
+
 import { NavLink, useLocation } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -58,7 +59,7 @@ const NavLinks = ({ onClose }) => {
       <div className="mt-0 md:mt-0">
         <NavLink
           to="/registration"
-          className={`${activeStyleCallback} text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110`}
+          className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
           onClick={onClose}
         >
           REGISTER
@@ -122,6 +123,8 @@ const Nav = () => {
           </div>
         </nav>
       </div>
+      {/* <div className="h-1 bg-[#e3e3e3] mt-2" style={{ width: 'calc(100% - 270px)', marginLeft: -20 }}></div> Adjust the width as necessary */}
+      <div className="hidden md:block h-1 bg-[#e3e3e3] mt-2" style={{ width: 'calc(100% - 270px)', marginLeft: -20 }}></div> {/* Adjust the width as necessary */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

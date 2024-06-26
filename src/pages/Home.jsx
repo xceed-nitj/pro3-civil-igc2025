@@ -40,7 +40,7 @@ function Home(props) {
       <div
         className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10 -mt-5 md:mt-0"
         style={{
-          backgroundImage: isMobile ? "url('background.png')" : "url('22.png')",
+          backgroundImage: isMobile ? "url('background.png')" : "url('background1.png')",
           backgroundSize: "cover", // Ensure the image covers the entire background
           backgroundRepeat: "no-repeat", // Prevent the image from repeating
           backgroundPosition: "center", // Center the background image
