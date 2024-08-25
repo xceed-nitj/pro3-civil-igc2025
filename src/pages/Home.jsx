@@ -4,13 +4,14 @@ import OurEvents from "../components/OurEvents";
 import HeroSection from "../components/HeroSection";
 // import Speakers from "../components/SpeakerSection/Speakers";
 import Footer from "../components/Footer";
-import AboutNITJ from "../components/AboutNITJ";
-import AboutNews from "../components/AboutNews";
+// import AboutNITJ from "../components/AboutNITJ";
+
 import SponsorShip from "../components/Sponsorship";
 import { useEffect, useState } from "react";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
 import About from '../components/About';
+
 
 function Home(props) {
   const [isMobile, setIsMobile] = useState(false);
@@ -56,12 +57,12 @@ function Home(props) {
       <div> <About confid={props.confId} /></div> 
     
       
-      <AboutNews confid={props.confId} />
+     
       <Slider confid={props.confId} />
       <Timeline confid={props.confId} />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId} />
-      <AboutNITJ confid={props.confId} />
+      {/* <AboutNITJ confid={props.confId} /> */}
       <SponsorShip confid={props.confId} />
       <Footer />
     </>
