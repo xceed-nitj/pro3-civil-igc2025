@@ -32,11 +32,12 @@ export default function Timeline(props) {
   }, []);
 
   return (
-    <div className=" bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 min-h-[200px]">
+    <section className="bg-cover bg-center text-black py-16 flex flex-col justify-center items-center h-screen" style={{ backgroundImage: 'url(imagegallery.jpg)' }}>
+        <div className=" bg-transparent container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 min-h-[200px]">
       <div className="w-full lg:w-3/5 md:max-w-[700px] pr-4">
 
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-4">Timeline</h2>
+          <h2 className="text-4xl text-white mb-4">Timeline</h2>
 
           <h3 className="text-xl font-medium leading-relaxed text-gray-800 lg:w-2/3 mx-auto">
 
@@ -99,7 +100,7 @@ export default function Timeline(props) {
       </div>
 
       <div className="w-full md:w-[700px] lg:w-2/5 px-4 lg:px-0   mt-10 lg:mt-0 mx-auto lg:pl-5 lg:mx-0 ">
-        <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">About Doaba Regional Centre (DRC)
+        <h2 className="text-4xl font-sans font-bold text-white mb-3 lg:mb-4">About Doaba Regional Centre (DRC)
         </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">
@@ -107,5 +108,6 @@ export default function Timeline(props) {
         </p>
       </div>
     </div>
+</section>
   );
 }

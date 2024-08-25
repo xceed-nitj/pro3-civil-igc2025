@@ -10,6 +10,7 @@ import SponsorShip from "../components/Sponsorship";
 import { useEffect, useState } from "react";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
+import About from '../components/About';
 
 function Home(props) {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +39,7 @@ function Home(props) {
   return (
     <>
       <div
-        className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10 -mt-5 md:mt-0"
+        className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10 -mt-5 md:mt-0 "
         style={{
           backgroundImage: isMobile ? "url('background.png')" : "url('background1.png')",
           backgroundSize: "cover", // Ensure the image covers the entire background
@@ -51,6 +52,10 @@ function Home(props) {
         </div>
         <HeroSection confid={props.confId} />
       </div>
+   
+      <div> <About confid={props.confId} /></div> 
+    
+      
       <AboutNews confid={props.confId} />
       <Slider confid={props.confId} />
       <Timeline confid={props.confId} />

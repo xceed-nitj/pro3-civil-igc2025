@@ -10,6 +10,7 @@ import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
 
 import './App.css'
+import About from "./components/About";
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
@@ -19,6 +20,7 @@ function App() {
 <div id="content ">
       < Routes >
         <Route path="/" element={<Home confId={confid} />} />
+        <Route path="/" element={<About confId={confid} />} />
         <Route path="sponsorship" element={<Sponsors />} />
         <Route path="events" element={<Events />} />
         <Route path="location" element={<Location confid={confid}  />} />
