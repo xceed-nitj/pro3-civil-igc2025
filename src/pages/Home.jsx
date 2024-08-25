@@ -1,6 +1,6 @@
 import '../global.css'; // Adjust the path if necessary
 import Timeline from "../components/Timeline";
-import OurEvents from "../components/OurEvents";
+import OurEvents from "../components/events";
 import HeroSection from "../components/HeroSection";
 // import Speakers from "../components/SpeakerSection/Speakers";
 import Footer from "../components/Footer";
