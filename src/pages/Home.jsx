@@ -2,16 +2,12 @@ import '../global.css'; // Adjust the path if necessary
 import Timeline from "../components/Timeline";
 import OurEvents from "../components/events";
 import HeroSection from "../components/HeroSection";
-// import Speakers from "../components/SpeakerSection/Speakers";
 import Footer from "../components/Footer";
-// import AboutNITJ from "../components/AboutNITJ";
-
 import SponsorShip from "../components/Sponsorship";
-import { useEffect, useState } from "react";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
 import About from '../components/About';
-
+import { useEffect, useState } from "react";
 
 function Home(props) {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,12 +36,11 @@ function Home(props) {
   return (
     <>
       <div
-        className="relative min-h-screen bg-cover bg-center p-2 md:p-4 pt-10 -mt-5 md:mt-0 "
+        className="relative min-h-screen bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 text-white p-2 md:p-4 pt-10 -mt-5 md:mt-0"
         style={{
-          backgroundImage: isMobile ? "url('background.png')" : "url('background1.png')",
-          backgroundSize: "cover", // Ensure the image covers the entire background
-          backgroundRepeat: "no-repeat", // Prevent the image from repeating
-          backgroundPosition: "center", // Center the background image
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       >
         <div className="top-0 w-screen z-40">
@@ -53,17 +48,17 @@ function Home(props) {
         </div>
         <HeroSection confid={props.confId} />
       </div>
-   
-      <div> <About confid={props.confId} /></div> 
-    
+
+      <div className="bg-white py-12 lg:py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <About confid={props.confId} />
+          <Slider confid={props.confId} />
+          <Timeline confid={props.confId} />
+          <OurEvents confid={props.confId} />
+          <SponsorShip confid={props.confId} />
+        </div>
+      </div>
       
-     
-      <Slider confid={props.confId} />
-      <Timeline confid={props.confId} />
-      {/* <Speakers /> */}
-      <OurEvents confid={props.confId} />
-      {/* <AboutNITJ confid={props.confId} /> */}
-      <SponsorShip confid={props.confId} />
       <Footer />
     </>
   );
