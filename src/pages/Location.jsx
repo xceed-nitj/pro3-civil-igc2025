@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import axios from "axios";
 import getEnvironment from "../getenvironment";
+import Separator from "../components/common/Separator"; // Add Separator for consistency if needed
 
 function Location(props) {
     const confid = props.confid;
@@ -25,17 +26,22 @@ function Location(props) {
 
     return (
         <>
-            <div className=" top-0 w-screen z-40 "> 
-                <Navbar />      
+            <div className="top-0 w-screen z-40">
+                <Navbar />
             </div>
-            <div className="bg-white container max-w-7xl mx-auto px-5 sm:px-10 lg:px-8 pt-[58px] min-h-[300px] lg:pt-[10px] pb-5 ">
-                <div className="w-full mx-auto md:w-[700px] px-4 lg:w-full" >
-                    <p className="text-2xl font-sans font-bold mb-5 text-gray-950 underline ">
-                        How to Reach NITJ
-                    </p>
-                    <p className="text-base text-justify font-sans font-base text-gray-800">
-                        {data ? <div dangerouslySetInnerHTML={{__html: data.description}} /> : ""}
-                    </p>
+            <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 lg:py-16">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="bg-white p-6 rounded-lg shadow-2xl">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">How to Reach NITJ</h2>
+                        <Separator /> {/* Optional: Add Separator if it aligns with your theme */}
+                        <div className="text-base text-justify font-sans font-base text-gray-800">
+                            {data ? (
+                                <div dangerouslySetInnerHTML={{ __html: data.description }} />
+                            ) : (
+                                <p className="text-center text-gray-600">Loading...</p>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer />
