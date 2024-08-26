@@ -7,27 +7,9 @@ import SponsorShip from "../components/Sponsorship";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
 import About from '../components/About';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Home(props) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Check if the screen width is less than 768px (typical mobile screen width)
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Initial check
-    handleResize();
-
-    // Listen to resize events to update the state
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   useEffect(() => {
     // Scroll to the top when component mounts
     window.scrollTo(0, 0);
