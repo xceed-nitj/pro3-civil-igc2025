@@ -23,7 +23,7 @@ const About = (props) => {
     >
       <div className="flex flex-col items-center mt-12">
         {/* About Heading */}
-        <h1 className="text-purple-500 text-4xl font-bold uppercase mt-40 mb-2 sm:mb-4 text-center">
+        <h1 className="text-[#12105F] text-4xl font-bold uppercase mt-40 mb-2 sm:mb-4 text-center">
           About
         </h1>
         
