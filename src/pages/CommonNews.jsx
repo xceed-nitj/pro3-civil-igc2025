@@ -24,8 +24,8 @@ function CommonNews() {
 
     return (
         <>
-            <div className="fixed top-0 w-screen z-40">
-                <Navbar />
+            <div className="fixed top-0 w-screen z-40 text-white">
+            <Navbar />
             </div>
             <SecNavbar />
 

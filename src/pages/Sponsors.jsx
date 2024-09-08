@@ -29,7 +29,7 @@ function Sponsors() {
 
     return (
         <>
-            <div className="top-0 w-screen z-40">
+            <div className="top-0 w-screen z-40 text-white">
                 <Navbar />
             </div>
 
