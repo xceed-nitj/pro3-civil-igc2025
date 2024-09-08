@@ -1,4 +1,3 @@
-
 import { NavLink, useLocation } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -12,7 +11,7 @@ const activeStyleCallback = ({ isActive }) =>
 
 const NavLinks = ({ onClose }) => {
   return (
-    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
+    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 -mt-2  ">
       <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10">
         <NavLink to="/" className={activeStyleCallback} onClick={onClose}>
           HOME
@@ -57,21 +56,23 @@ const NavLinks = ({ onClose }) => {
         </NavLink>
       </div>
       <div className="mt-0 md:mt-0">
-        <NavLink
-          to="/registration"
-          className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
-          onClick={onClose}
-        >
+      <NavLink
+  to="/registration"
+  className={`text-white bg-pink-500 text-center p-2 rounded-full transition-transform transform hover:scale-110 ${activeStyleCallback}`}
+  onClick={onClose}
+>
           REGISTER
         </NavLink>
       </div>
-      <div className="contact1 flex items-center absolute text-white right-2 top-5 md:flex">
-        <FontAwesomeIcon icon={faPhone} />
-        <p>+9888895253</p>
-      </div>
-      <div className="contact2 flex items-center text-white absolute right-2 top-10 mt-5 md:flex">
-        <FontAwesomeIcon icon={faEnvelope} />
-        <p>chemcon2024@gmail.com</p>
+      <div className="flex flex-row">
+        <div className="contact1 flex items-center text-white absolute right-4 top-5">
+          <FontAwesomeIcon icon={faPhone} />
+          <p>+91 9888895253</p>
+        </div>
+        <div className="contact2 flex items-center text-white absolute right-4 top-10">
+          <FontAwesomeIcon icon={faEnvelope} />
+          <p>chemcon2024@gmail.com</p>
+        </div>
       </div>
     </div>
   );
@@ -91,62 +92,97 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-transparent fixed w-full z-10"></nav>
-      <div className="bg-transparent top-0 left-0 p-0 z-10 flex items-center w-full">
-        <div className="md:hidden flex items-center justify-start">
-          <button onClick={toggleNavbar} className="p-2">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-        <div className="hidden md:flex items-center mx-0">
-          <img
-            src="logonav.png"
-            alt="Logo"
-            className="w-5 h-5 md:w-10 md:h-10 mr-4 bg-transparent mt-0"
-          />
-        </div>
-        <div className="flex flex-1 md:hidden justify-end">
-          <div className="flex flex-col text-gray-700 space-y-1 text-right">
-            <div className="flex items-center space-x-2 justify-end">
-              <FontAwesomeIcon icon={faPhone} />
-              <p>+9888895253</p>
-            </div>
-            <div className="flex items-center space-x-2 justify-end">
-              <FontAwesomeIcon icon={faEnvelope} />
-              <p>chemcon2024@gmail.com</p>
+      <nav
+  className="bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 fixed w-full z-10 shadow-lg"
+  style={{ margin: 0, padding: 0, top: 0, left: 0 }}
+>
+        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+          <div className="flex items-center">
+            <img
+              src="logonav.png"
+              alt="Logo"
+              className="w-5 h-5 md:w-10 md:h-10 mr-4"
+            />
+            <div className="hidden md:flex space-x-6">
+              <NavLinks />
             </div>
           </div>
-        </div>
-        <nav className="hidden md:flex flex-1 items-center justify-between overflow-hidden">
-          <div className="space-x-6 ml-16 px-10">
-            <NavLinks />
+          <div className="md:hidden">
+            <button onClick={toggleNavbar} className="p-2">
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-        </nav>
-      </div>
-      {/* <div className="h-1 bg-[#e3e3e3] mt-2" style={{ width: 'calc(100% - 270px)', marginLeft: -20 }}></div> Adjust the width as necessary */}
-      <div className="hidden md:block h-1 bg-[#e3e3e3] mt-2" style={{ width: 'calc(100% - 270px)', marginLeft: -20 }}></div> {/* Adjust the width as necessary */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ type: "tween", duration: 0.5 }}
-            className="fixed top-0 left-0 w-56 md:w-80 h-full bg-white shadow-lg z-20"
-          >
-            <div className="p-4">
-              <div className="flex justify-end mb-4">
-                <button onClick={toggleNavbar} className="p-2">
-                  <X size={24} />
-                </button>
+        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", duration: 0.5 }}
+              className="fixed top-0 left-0 w-56 md:w-80 h-full bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 shadow-lg z-20"
+            >
+              <div className="p-4">
+                <div className="flex justify-end mb-4">
+                  <button onClick={toggleNavbar} className="p-2">
+                    <X size={24} />
+                  </button>
+                </div>
+                <NavLinks onClose={toggleNavbar} />
               </div>
-              <NavLinks onClose={toggleNavbar} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
     </>
   );
 };
 
 export default Nav;
+
+// return (
+//   <>
+//     <nav className="  bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 fixed w-full z-10" style={{ margin: 0, padding: 0, top: 0 }}>
+//       <div className="container mx-auto flex justify-between items-center py-4 px-4">
+//         <div className="flex items-center">
+//           <img
+//             src="logonav.png"
+//             alt="Logo"
+//             className="w-5 h-5 md:w-10 md:h-10 mr-4"
+//           />
+//           <div className="hidden md:flex space-x-6">
+//             <NavLinks />
+//           </div>
+//         </div>
+//         <div className="md:hidden">
+//           <button onClick={toggleNavbar} className="p-2">
+//             {isOpen ? <X size={24} /> : <Menu size={24} />}
+//           </button>
+//         </div>
+//       </div>
+//       <AnimatePresence>
+//         {isOpen && (
+//           <motion.div
+//             initial={{ x: "-100%" }}
+//             animate={{ x: 0 }}
+//             exit={{ x: "-100%" }}
+//             transition={{ type: "tween", duration: 0.5 }}
+//             className="fixed top-0 left-0 w-56 md:w-80 h-full bg-white shadow-lg z-20"
+//           >
+//             <div className="p-4">
+//               <div className="flex justify-end mb-4">
+//                 <button onClick={toggleNavbar} className="p-2">
+//                   <X size={24} />
+//                 </button>
+//               </div>
+//               <NavLinks onClose={toggleNavbar} />
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </nav>
+//   </>
+// );
+// };
+
+// export default Nav;
