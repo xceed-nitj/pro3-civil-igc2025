@@ -17,9 +17,18 @@ function Home(props) {
 
   return (
     <>
-      <div
+      {/* <div
         className="relative min-h-screen bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 text-white p-2 md:p-4 pt-10 -mt-5 md:mt-0"
         style={{
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      > */}
+      <div
+        className="relative min-h-screen bg-transparent text-white p-2 md:p-4 pt-10 -mt-5 md:mt-0"
+        style={{
+          backgroundImage: 'url(background1.png)', // Adjust the path if necessary
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

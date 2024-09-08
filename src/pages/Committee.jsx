@@ -30,7 +30,7 @@ function Committee(props) {
             </div>
             <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 lg:py-16">
                 <div className="container mx-auto px-4 lg:px-8">
-                    <div className="bg-white p-6 rounded-lg shadow-2xl">
+                    <div className="bg-white p-6 rounded-lg shadow-2xl mt-5">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Committee Members</h2>
                         <Separator />
                         <div className="min-h-[300px] lg:pt-[10px] pb-5">

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 
@@ -58,11 +59,11 @@ const HeroSection = () => {
       {/* Content Section */}
       <div className="content flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
         <p className="date text-pink-600 font-semibold text-2xl md:text-3xl">DECEMBER 27-30, 2025 | NITJ</p>
-        <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4">Indian Geotechnical</p>
-        <p className="chem text-5xl md:text-7xl font-bold">CONFERENCE</p>
-        <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4">2024</p>
+        <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">Indian Geotechnical</p>
+        <p className="chem text-5xl md:text-7xl font-bold text-black">CONFERENCE</p>
+        <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">2024</p>
         <div className="info0 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-4 text-center rounded-full mt-4 max-w-lg mx-auto">
-          <p className="text-lg md:text-2xl">Role of Chemical Engineering towards Development and Atmanirbhar Bharat</p>
+          <p className="text-lg md:text-2xl ">Role of Chemical Engineering towards Development and Atmanirbhar Bharat</p>
         </div>
         <div className="button flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
           <div className="register bg-pink-500 px-6 text-white py-2 md:py-3 rounded-lg flex justify-center items-center hover:scale-110 transition-transform text-xl">Register</div>
@@ -70,7 +71,7 @@ const HeroSection = () => {
         </div>
         <div className="organi text-center mt-8">
           <p className="by font-semibold text-pink-500">Organized by:</p>
-          <p className="iic font-bold mt-2">Indian Institute of Chemical Engineers,<br /><span>Doaba Regional Centre NIT JALANDHAR</span></p>
+          <p className="iic font-bold mt-2 text-black">Indian Institute of Chemical Engineers,<br /><span>Doaba Regional Centre NIT JALANDHAR</span></p>
         </div>
       </div>
 
@@ -81,21 +82,40 @@ const HeroSection = () => {
         </div>
       </div>
 
+ {/* Countdown Timer for Laptop and Larger Screens Only */}
+ <div className="countdown-container hidden lg:flex  p-4 bg-gradient-to-r from-pink-500 to-purple-600 bg-opacity-50 text-white rounded-lg shadow-lg flex items-center justify-center space-x-4 absolute bottom-4 right-16">
+        <div className="countdown-item flex flex-col items-center">
+          <div className="font-semibold text-lg md:text-xl lg:text-2xl">{timeLeft.days}</div>
+          <div className="text-xs md:text-sm lg:text-base">Days</div>
+        </div>
+        <div className="countdown-item flex flex-col items-center">
+          <div className="font-semibold text-lg md:text-xl lg:text-2xl">{timeLeft.hours}</div>
+          <div className="text-xs md:text-sm lg:text-base">Hrs</div>
+        </div>
+        <div className="countdown-item flex flex-col items-center">
+          <div className="font-semibold text-lg md:text-xl lg:text-2xl">{timeLeft.minutes}</div>
+          <div className="text-xs md:text-sm lg:text-base">Mins</div>
+        </div>
+        <div className="countdown-item flex flex-col items-center">
+          <div className="font-semibold text-lg md:text-xl lg:text-2xl">{timeLeft.seconds}</div>
+          <div className="text-xs md:text-sm lg:text-base">Sec</div>
+        </div>
+      </div>
       {/* Countdown Timer */}
-      <div className="countdown-container absolute bottom-4 right-4 p-4 bg-gradient-to-r from-pink-500 to-purple-600 bg-opacity-50 text-white rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-        <div className="countdown-item flex flex-col items-center border-b border-white md:border-r md:border-b-0 pb-2 md:pb-0 px-4">
+      <div className="countdown-container block md:hidden   mt-8 md:mt-0 p-4 bg-gradient-to-r from-pink-500 to-purple-600 bg-opacity-50 text-white rounded-lg shadow-lg flex items-center justify-center space-x-6">
+        <div className="countdown-item flex flex-col items-center">
           <div className="font-semibold text-xl md:text-2xl">{timeLeft.days}</div>
           <div className="text-xs md:text-sm">Days</div>
         </div>
-        <div className="countdown-item flex flex-col items-center border-b border-white md:border-r md:border-b-0 pb-2 md:pb-0 px-4">
+        <div className="countdown-item flex flex-col items-center">
           <div className="font-semibold text-xl md:text-2xl">{timeLeft.hours}</div>
           <div className="text-xs md:text-sm">Hrs</div>
         </div>
-        <div className="countdown-item flex flex-col items-center border-b border-white md:border-r md:border-b-0 pb-2 md:pb-0 px-4">
+        <div className="countdown-item flex flex-col items-center">
           <div className="font-semibold text-xl md:text-2xl">{timeLeft.minutes}</div>
           <div className="text-xs md:text-sm">Mins</div>
         </div>
-        <div className="countdown-item flex flex-col items-center pb-2 md:pb-0 px-4">
+        <div className="countdown-item flex flex-col items-center">
           <div className="font-semibold text-xl md:text-2xl">{timeLeft.seconds}</div>
           <div className="text-xs md:text-sm">Sec</div>
         </div>
