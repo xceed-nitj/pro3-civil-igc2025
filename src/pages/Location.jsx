@@ -26,7 +26,7 @@ function Location(props) {
 
     return (
         <>
-            <div className="top-0 w-screen z-40">
+            <div className="top-0 w-screen z-40 text-white">
                 <Navbar />
             </div>
             <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 lg:py-16">

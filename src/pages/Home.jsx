@@ -25,8 +25,9 @@ function Home(props) {
           backgroundPosition: "center",
         }}
       >
-        <div className="top-0 w-screen z-40">
           <Navbar />
+        <div className="top-0 w-screen z-40">
+
         </div>
         <HeroSection confid={props.confId} />
       </div>
