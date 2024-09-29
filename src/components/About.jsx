@@ -1,6 +1,25 @@
 import AboutNews from "../components/AboutNews";
+import axios from "axios";
+import getEnvironment from "../getenvironment";
+import { useState, useEffect } from "react";
 
 const About = (props) => {
+
+  const confid = props.confid;
+  const [data , setData] = useState(null);
+  const apiUrl = getEnvironment();
+
+  useEffect(() => {
+    axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+      withCredentials: true
+    })
+      .then(res => {
+        setData(res.data);
+        console.log(res.data);
+      })
+      .catch(err => console.log(err));    
+  }, [apiUrl, confid]);
+
   return (
     <section
       className="relative bg-cover bg-center text-black py-16 flex flex-col justify-center items-center min-h-screen"
@@ -31,13 +50,12 @@ const About = (props) => {
 
         <div className="w-full flex justify-center">
           <p className="text-base max-w-3xl mx-auto leading-relaxed text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec dapibus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus...
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          {data ? <div dangerouslySetInnerHTML={{ __html: data.about[0].description }} /> : <div ></div>}
           </p>
         </div>
 
         <div className="w-full flex justify-center items-center">
-          <AboutNews confid={props.confId} />
+          <AboutNews confid={props.confid} />
         </div>
       </div>
     </section>

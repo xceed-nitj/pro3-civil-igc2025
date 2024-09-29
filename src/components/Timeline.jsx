@@ -120,7 +120,7 @@ import formatDate from "../utility/formatDate";
 export default function Timeline(props) {
   const confid = props.confid;
   const [datesData, setDatesData] = useState([]);
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
   const apiUrl = getEnvironment();
 
   useEffect(() => {
@@ -133,20 +133,20 @@ export default function Timeline(props) {
       })
       .catch(err => console.log(err));
 
-    axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
-      withCredentials: true
-    })
-      .then(res => {
-        setData(res.data);
-        console.log(res.data);
-      })
-      .catch(err => console.log(err));
+    // axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+    //   withCredentials: true
+    // })
+    //   .then(res => {
+    //     setData(res.data);
+    //     console.log(res.data);
+    //   })
+    //   .catch(err => console.log(err));
   }, [apiUrl, confid]);
 
   return (
     <section className="bg-cover bg-center text-black py-16 flex flex-col justify-center items-center min-h-screen relative" style={{ backgroundImage: 'url(imagegallery.jpg)' }}>
       <div className="bg-transparent container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-between lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 relative z-10">
-        <div className="w-full lg:w-3/5 md:max-w-[700px] pr-4">
+        <div className="w-full lg:w-full md:max-w-[full] pr-4">
           <div className="text-center mb-8">
             <h2 className="text-4xl text-white mb-4">Timeline</h2>
             <h3 className="text-xl font-medium leading-relaxed text-gray-800 lg:w-2/3 mx-auto"></h3>
@@ -204,11 +204,11 @@ export default function Timeline(props) {
           </div>
         </div>
 
-        <div className="w-full md:w-[700px] lg:w-2/5 px-4 lg:px-0 mt-10 lg:mt-0 mx-auto lg:pl-5 lg:mx-0">
-          <h2 className="text-4xl font-sans font-bold text-white mb-3 lg:mb-4">About Doaba Regional Centre (DRC)</h2>
+        <div className="w-0 md:w-[0px] lg:w-0 px-4 lg:px-0 mt-10 lg:mt-0 mx-auto lg:pl-5 lg:mx-0">
+          {/* <h2 className="text-4xl font-sans font-bold text-white mb-3 lg:mb-4">About Doaba Regional Centre (DRC)</h2> */}
           <Separator />
           <p className="text-base text-justify font-sans font-base text-white">
-            {data ? <div dangerouslySetInnerHTML={{ __html: data.about[2].description }} /> : " "}
+            {/* {data ? <div dangerouslySetInnerHTML={{ __html: data.about[2].description }} /> : " "} */}
           </p>
         </div>
       </div>

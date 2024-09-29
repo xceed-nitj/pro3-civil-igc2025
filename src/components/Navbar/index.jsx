@@ -130,7 +130,9 @@ const Nav = () => {
   return (
     <>
       <nav
-        className="bg-transparent fixed w-full z-10 shadow-lg"
+        // className="bg-transparent fixed w-full z-10 shadow-lg"
+        className="bg-white bg-opacity-50 fixed w-full z-10 shadow-lg"
+
         style={{ margin: 0, padding: 0, top: 0, left: 0 }}
       >
         <div className="container mx-auto flex justify-between items-center py-4 px-4">

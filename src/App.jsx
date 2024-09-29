@@ -12,7 +12,7 @@ import CommonNews from "./pages/CommonNews";
 import './App.css'
 import About from "./components/About";
 function App() {
-   const confid="65fed89def981d3a955ddd9f";
+   const confid="66d7e4929bc0213cd4884ec4";
   return (
     <>
     

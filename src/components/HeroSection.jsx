@@ -1,14 +1,34 @@
 
 import { useState, useEffect } from 'react';
+import axios from "axios";
+import getEnvironment from "../getenvironment";
 import 'tailwindcss/tailwind.css';
+import formatDate from "../utility/formatDate.js"
 
-const HeroSection = () => {
+const HeroSection = (props) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const photos = [
     'https://cgu-odisha.ac.in/wp-content/uploads/2023/05/diversityandinclusionincivilengineering3.jpg',
     'https://st.depositphotos.com/1154952/4624/i/450/depositphotos_46247795-stock-photo-engineer-working-table-plan-home.jpg',
     'https://storables.com/wp-content/uploads/2023/11/why-is-it-called-civil-engineering-1699953005.jpg'
   ];
+
+  const apiUrl = getEnvironment();
+  const confid = props.confid;
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+      withCredentials: true
+    })
+      .then(res => {
+        setData(res.data);
+        console.log(res.data);
+      })
+      .catch(err => console.log(err));
+
+    
+  }, [apiUrl, confid]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,12 +78,12 @@ const HeroSection = () => {
     <div className="relative min-h-screen bg-cover bg-center p-4 flex flex-col md:flex-row items-center justify-center ml-0 md:ml-24 pt-20 md:pt-0">
       {/* Content Section */}
       <div className="content flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
-        <p className="date text-pink-600 font-semibold text-2xl md:text-3xl">DECEMBER 27-30, 2025 | NITJ</p>
+        <p className="date text-pink-600 font-semibold text-2xl md:text-3xl">{data ? formatDate(data.confStartDate):" "} - { data ? formatDate(data.confEndDate):" "} | NITJ</p>
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">Indian Geotechnical</p>
         <p className="chem text-5xl md:text-7xl font-bold text-black">CONFERENCE</p>
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">2024</p>
         <div className="info0 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-4 text-center rounded-full mt-4 max-w-lg mx-auto">
-          <p className="text-lg md:text-2xl ">Role of Chemical Engineering towards Development and Atmanirbhar Bharat</p>
+          <p className="text-lg md:text-2xl ">Role of Civil Engineering towards Development and Atmanirbhar Bharat</p>
         </div>
         <div className="button flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
           <div className="register bg-pink-500 px-6 text-white py-2 md:py-3 rounded-lg flex justify-center items-center hover:scale-110 transition-transform text-xl">Register</div>

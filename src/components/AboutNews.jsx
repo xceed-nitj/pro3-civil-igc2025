@@ -17,8 +17,11 @@ const AboutNews = (props) => {
       .then(res => {
         setNewsData(res.data);
         console.log(res.data);
+        console.log(confid);
       })
       .catch(err => console.log(err));
+
+    
   }, [apiUrl, confid]);
 
   return (
@@ -28,7 +31,7 @@ const AboutNews = (props) => {
         <Separator />
         <div
           id="news"
-          className="w-full h-[150px] overflow-auto bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 to-purple-800 rounded-xl p-4"
+          className="w-full  min-h-[150px] max-h-[200px]: overflow-scroll bg-gradient-to-r from-[#12105F]  via-purple-800 to-purple-800 rounded-xl p-4"
         >
           <div
             className={`space-y-4 ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"}`}
