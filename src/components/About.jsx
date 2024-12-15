@@ -44,7 +44,7 @@ const About = (props) => {
 
         <div className="w-full flex justify-center">
           <h3 className="text-4xl font-bold text-center">
-            Indian Geotechnical CONFERENCE 2024
+          INDIAN GEOTECHNICAL CONFERENCE 2025
           </h3>
         </div>
 

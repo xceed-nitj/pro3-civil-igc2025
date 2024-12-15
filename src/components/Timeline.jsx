@@ -161,7 +161,7 @@ export default function Timeline(props) {
               <div className="mx-auto w-1 h-2.5 grow-0 bg-gradient-to-t from-transparent to-accent-100 rounded-b" />
             </div>
 
-            <ul className="relative space-y-4 pl-10 md:pl-12 lg:pl-0">
+            <ul className="relative space-y-4 pl-10 md:pl-12 lg:pl-0 z=0">
               {datesData.map((item, index) => (
                 index % 2 === 0 ? (
                   <li key={index} className="relative lg:w-1/2 lg:pr-6 lg:mr-auto flex flex-col">

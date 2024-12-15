@@ -11,14 +11,16 @@ const Footer = () => {
             Contact Us
           </p>
           <ul className="mt-4 space-y-1 text-sm text-white">
-            <li>Prof. S. Bajpai</li>
+            <li>Prof. S Rupali </li>
+            <li>Prof. Kanish Kapoor</li>
+            <li>Prof. K Senthil</li>
             <li>Organizing Secretary, CHEMCON-2024</li>
             <li>NIT Jalandhar</li>
-            <li>Phone: 9888895253</li>
-            <li>Email: chemcon2024@gmail.com</li>
+            <li>Phone: +91 82659-99739</li>
+            <li>Email: igsjalandharchapter@nitj.ac.in</li>
             <li>
               <a href="/" className="text-white transition hover:opacity-75">
-                Website: www.chemcon2024.com
+                Website: https://igc2025nitj.com/
               </a>
             </li>
           </ul>

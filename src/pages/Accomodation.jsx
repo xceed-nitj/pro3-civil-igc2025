@@ -20,13 +20,11 @@ function Accommodation() {
                         <Separator /> {/* Optional: Add Separator if it aligns with your theme */}
                         <div className="text-base text-justify font-sans font-base text-gray-800">
                             <p>
-                                The accommodation for the delegates can be arranged in hotels
-                                (List will be available on the website), guest houses, and institute
-                                hostels subject to the availability of the same on request and on
-                                payment basis. The requirement for the preferred accommodation
-                                along with the tariff range and single/double occupancy should be
-                                sent to the Organizing Secretary well in advance.
-                            </p>
+                            A list of nearby hotels and paid homestays in the city will be 
+communicated on the conference website 
+(www.igc2025nitj.com). Please note that the accommodation is 
+not included in the conference fee and the delegates are 
+responsible for their own accommodation.  </p>
                         </div>
                     </div>
                 </div>
