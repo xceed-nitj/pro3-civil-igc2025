@@ -16,11 +16,11 @@ const Events = () => {
     <div className="bg-gray-100 py-8 px-4">
       <div className="max-w-[870px] mx-auto text-center mb-8"> {/* Custom width */}
         <h2 className="text-2xl font-bold text-purple-700 mb-4">
-          December 27-30, 2025
+          December 18-20, 2025
         </h2>
         <h3 className="text-xl font-semibold">OUR EVENTS</h3>
         <div className="flex justify-center space-x-4 mt-4">
-          {[1, 2, 3, 4].map((day) => (
+          {[1, 2, 3].map((day) => (
             <button
               key={day}
               className={`px-4 py-2 rounded-md text-white font-semibold ${
