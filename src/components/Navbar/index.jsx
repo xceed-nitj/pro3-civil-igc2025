@@ -74,13 +74,13 @@ const NavLinks = ({ onClose }) => {
   {/* Phone Number - hidden on laptop (md) and larger */}
   <div className="contact1 flex items-center text-black absolute right-4 top-5 block md:hidden">
     <FontAwesomeIcon icon={faPhone} />
-    <p className="ml-2">+91 9888895253</p>
+    <p className="ml-2">+91 82659-99739</p>
   </div>
 
   {/* Email - hidden on laptop (md) and larger */}
   <div className="contact2 flex items-center text-black absolute right-4 top-10 block md:hidden">
     <FontAwesomeIcon icon={faEnvelope} />
-    <p className="ml-2">chemcon2024@gmail.com</p>
+    <p className="ml-2"> igsjalandharchapter@nitj.ac.in</p>
   </div>
 </div>
 

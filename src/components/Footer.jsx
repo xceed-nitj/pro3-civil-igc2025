@@ -14,7 +14,7 @@ const Footer = () => {
             <li>Prof. S Rupali </li>
             <li>Prof. Kanish Kapoor</li>
             <li>Prof. K Senthil</li>
-            <li>Organizing Secretary, CHEMCON-2024</li>
+            <li>Organizing Secretary, igc2025</li>
             <li>NIT Jalandhar</li>
             <li>Phone: +91 82659-99739</li>
             <li>Email: igsjalandharchapter@nitj.ac.in</li>

@@ -227,7 +227,7 @@ const HeroSection = (props) => {
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">Indian Geotechnical</p>
         <p className="chem text-5xl md:text-7xl font-bold text-black">CONFERENCE</p>
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">2025</p>
-        <div className="info0 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-4 text-center rounded-full mt-4 max-w-lg mx-auto">
+        <div className="info0 text-black font-bold mt-4 ml-0 max-w-lg mx-auto">
           <p className="text-lg md:text-2xl">Role of Civil Engineering towards Development and Atmanirbhar Bharat</p>
         </div>
         <div className="button flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
