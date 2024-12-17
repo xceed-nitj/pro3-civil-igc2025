@@ -4,31 +4,6 @@ const Events = () => {
   // Inline event data
   const events = [
     {
-      day: 2,
-      title: "SRI DHIRUBHAI AMBANI COMMEMORATION DAY",
-      date: "December 28, 2025",
-      description:
-        "SRI DHIRUBHAI AMBANI COMMEMORATION DAY WILL BE CELEBRATED ON DECEMBER 28, 2025 AS A TRIBUTE TO THE GREAT VISIONARY.",
-      image: "dhirubhai.jpg",
-      link: "/event-details/sri-dhirubhai-ambani",
-    },
-    {
-      day: 2,
-      title: "EXHIBITION",
-      date: "December 28, 2025",
-      description:
-        "AN EXHIBITION OF CHEMICAL ENGINEERING AND ALLIED BUSINESSES INCLUDING SAFETY, TECHNOLOGY SHOWCASES, CONSULTANTS, INSTRUMENTATION, TURNKEY PACKAGES AND COMMUNICATION, EQUIPMENT, INSTRUMENTS, BOOKS AND JOURNALS, ETC. IS PROPOSED DURING CHEMCON 2024.",
-      image: "exhibition.jpg",
-      link: "/event-details/exhibition",
-    },
-    {
-      day: 2,
-      title: "TECHNICAL SESSIONS",
-      date: "December 28, 2025",
-      description:
-        "TECHNICAL SESSIONS WILL FOCUS ON THE THEME OF THE CONGRESS AND THE FOLLOWING BROAD THEMES WILL BE COVERED WITH INTERACTION THROUGH PLENARY SESSIONS, INVITED LECTURES, PAPER PRESENTATIONS AND POSTER SESSIONS.",
-      image: "technical.jpeg",
-      link: "/event-details/technical-sessions",
     },
   ];
 

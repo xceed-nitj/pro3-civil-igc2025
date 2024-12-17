@@ -225,10 +225,10 @@ const HeroSection = (props) => {
       <div className="content flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
         <p className="date text-pink-600 font-semibold text-2xl md:text-3xl">{data ? formatDate(data.confStartDate) : " "} - {data ? formatDate(data.confEndDate) : " "} | NITJ</p>
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">Indian Geotechnical</p>
-        <p className="chem text-5xl md:text-7xl font-bold text-black">CONFERENCE</p>
+        <p className="chem text-5xl md:text-5xl font-bold text-black">Conference</p>
         <p className="ii text-3xl md:text-5xl font-bold mt-2 md:mt-4 text-black">2025</p>
         <div className="info0 text-black font-bold mt-4 ml-0 max-w-lg mx-auto">
-          <p className="text-lg md:text-2xl">Role of Civil Engineering towards Development and Atmanirbhar Bharat</p>
+          {/* <p className="text-lg md:text-2xl">Role of Civil Engineering towards Development and Atmanirbhar Bharat</p> */}
         </div>
         <div className="button flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
           {/* Use Link component to navigate */}

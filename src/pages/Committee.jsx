@@ -103,7 +103,7 @@ const committeeData = [
         members: ["H S Chore (Secretary IGS Jalandhar Chapter)"],
     },
     {
-        type: "VICE-CHAIRMEN",
+        type: "VICE-CHAIRMAN",
         members: ["Sanjeev Naval (Vice Chairman IGS Jalandhar Chapter)"],
     },
     {
