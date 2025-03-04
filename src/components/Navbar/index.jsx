@@ -51,24 +51,27 @@ const NavLinks = ({ onClose }) => {
         >
           ACCOMMODATION
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/souvenir"
           className={activeStyleCallback}
           onClick={onClose}
           style={{ color: 'black' }}
         >
           SOUVENIR
-        </NavLink>
+        </NavLink> */}
       </div>
       <div className="mt-0 md:mt-0">
-        <NavLink
-          to="/registration"
-          className={`text-black bg-pink-500 text-center p-2 rounded-full transition-transform transform hover:scale-110 ${activeStyleCallback}`}
-          onClick={onClose}
-          style={{ color: 'black' }}
-        >
-          REGISTER
-        </NavLink>
+      <a
+  href="https://meteor.springer.com/IGC2025"
+  className={`text-black bg-pink-500 text-center p-2 rounded-full transition-transform transform hover:scale-110 ${activeStyleCallback}`}
+  onClick={onClose}
+  style={{ color: 'black' }}
+  target="_blank" // Optional: Opens the link in a new tab
+  rel="noopener noreferrer" // Recommended security measure when using target="_blank"
+>
+  REGISTER
+</a>
+
       </div>
       <div className="flex flex-row">
   {/* Phone Number - hidden on laptop (md) and larger */}
