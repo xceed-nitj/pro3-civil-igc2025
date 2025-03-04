@@ -389,7 +389,7 @@ function SponsorShip() {
                                     <div key={index} className="bg-white p-4 mb-4 rounded-lg shadow-md">
                                         <div className="mb-2">
                                             <h3 className="text-lg font-semibold text-gray-900">{item.category}</h3>
-                                            <p className="text-gray-700">Fee: {item.fee} INR</p>
+                                            <p className="text-gray-700">Fee: {item.fee}Lakhs INR</p>
                                             <p className="text-gray-700">Delegates: {item.delegates}</p>
                                             <p className="text-gray-700">Free Ad: {item.freeAd}</p>
                                             <p className="text-gray-700">Corporate Presentation: {item.corporatePresentation}</p>
