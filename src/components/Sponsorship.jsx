@@ -24,7 +24,7 @@ function SponsorShip() {
                             <thead className="bg-gradient-to-r from-purple-600 to-purple-800 text-white">
                                 <tr>
                                     <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Category</th>
-                                    <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Fee (in INR)</th>
+                                    <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Fee<hr></hr>Lakhs (in INR)</th>
                                     <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Delegates</th>
                                     <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Free Ad</th>
                                     <th className="p-2 text-xs sm:text-sm md:text-base font-semibold">Corporate Presentation</th>
