@@ -79,14 +79,14 @@ const HeroSection = (props) => {
       <div className="flex justify-center gap-6 md:my-4 md:mx-24">
         <img src="nitj.png" alt="Logo 1" className="h-16 w-16 object-contain" />
         <img src="igs.jpg" alt="Logo 2" className="h-16 w-16 object-contain" />
-        <img src="springe.png" alt="Logo 3" className="h-16 object-contain" />
+        <img src="spring.png" alt="Logo 3" className="h-16 object-contain" />
         {/* <img src="logo4.jpg" alt="Logo 4" className="h-16 w-16 object-contain" /> */}
       </div>
-        <p className="date text-pink-600 font-semibold text-2xl mt-2 md:text-2xl">{data ? formatDate(data.confStartDate) : " "} - {data ? formatDate(data.confEndDate) : " "} | NITJ</p>
+        <p className="date text-pink-600 font-semibold text-xl mt-2 md:text-2xl">{data ? formatDate(data.confStartDate) : " "} - {data ? formatDate(data.confEndDate) : " "} | NITJ</p>
         <p className="ii text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-black">INDIAN GEOTECHNICL CONFERENCE</p>
-        <p className="chem text-5xl md:text-2xl font-bold text-black">on</p>
-        <p className="chem text-5xl md:text-2xl font-bold text-black">Geotechnical Practices for</p>
-        <p className="chem text-5xl md:text-2xl font-bold text-black">Innovations and Sustainability</p>
+        <p className="chem text-xl md:text-2xl font-bold text-black">on</p>
+        <p className="chem text-1xl md:text-2xl font-bold text-black">Geotechnical Practices for</p>
+        <p className="chem text-1xl md:text-2xl font-bold text-black">Innovations and Sustainability</p>
 
         
         <p className="ii text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-black">IGC-2025</p>
@@ -121,7 +121,7 @@ www.nitj.ac.in </span></p>
       <div className="flex flex-wrap justify-center items-start gap-10 mt-4">
         {/* Department of Civil Engineering */}
         <div className="flex flex-col items-center text-center">
-          <p className="text-xl font-semibold text-black mt-2">Department of Civil Engineering</p>
+          <p className=" text-small md:text-xl font-semibold text-black mt-2">Department of Civil Engineering</p>
           <p className="text-black font-bold mt-1">
             Dr B R Ambedkar National <br />
             Institute of Technology <br />

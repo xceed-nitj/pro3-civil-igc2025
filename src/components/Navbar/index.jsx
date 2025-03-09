@@ -123,7 +123,7 @@ const Nav = () => {
           <div className="flex items-center">
             <img src="logonav.png" alt="Logo" className="w-5 h-5 md:w-10 md:h-10 mr-2" />
             <span className="text-white font-bold text-lg">IGC-2025</span>
-            <div className="hidden md:flex md:text-[14px] space-x-6 ml-16 mt-2">
+            <div className="hidden md:flex md:text-[14px] space-x-1 ml-40 mt-2">
               <NavLinks />
             </div>
           </div>
