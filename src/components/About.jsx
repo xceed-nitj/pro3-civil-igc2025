@@ -154,7 +154,7 @@ const About = (props) => {
           {/* <h3 className="text-Black text-4xl font-bold uppercase py-4 rounded-md">
             ABOUT
           </h3> */}
-            <h3 className="text-3xl font-sans font-bold text-gray-950 text-center md:text-left mt-10">
+            <h3 className="text-3xl font-sans font-bold text-gray-950 text-center md:text-left mt-1">
             About Conference
             </h3>
             <p className="text-base leading-relaxed text-justify mt-4">
