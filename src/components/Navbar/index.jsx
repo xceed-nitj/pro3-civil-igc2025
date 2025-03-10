@@ -53,16 +53,13 @@ const NavLinks = ({ onClose }) => {
         </NavLink>
       </div>
       <div className="mt-0 md:mt-0">
-        <a
-          href="https://meteor.springer.com/IGC2025"
-          className={`text-white bg-pink-500 text-center p-2 rounded-full transition-transform transform hover:scale-110 ${activeStyleCallback}`}
+      <NavLink
+          to="/registration"
+          className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
           onClick={onClose}
-          style={{ color: 'white' }}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           REGISTER
-        </a>
+        </NavLink>
       </div>
       <div className="flex flex-row">
         <div className="contact1 flex bg-violet-900 items-center text-white absolute right-4 top-5 block md:hidden">
