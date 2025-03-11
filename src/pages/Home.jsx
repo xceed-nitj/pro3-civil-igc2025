@@ -41,14 +41,14 @@ function Home(props) {
         <HeroSection confid={props.confId} />
       </div>
 
-      <div className="bg-white py-12 lg:py-16">
-        <div className="container mx-auto px-4 lg:px-8">
+      <div className="bg-white">
+        {/* <div className="container mx-auto"> */}
           <About confid={props.confId} />
           <Slider confid={props.confId} />
           <Timeline confid={props.confId} />
           <OurEvents confid={props.confId} />
           <SponsorShip confid={props.confId} />
-        </div>
+        {/* </div> */}
       </div>
       
       <Footer />
