@@ -19,7 +19,7 @@ function SponsorShip() {
                     <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
                         Sponsors receive two complimentary delegate passes and enjoy local hospitality during the congress. Additionally, hoardings and banners can be displayed at locations designated by the organizers.
                     </p>
-                    <div className="overflow-x-auto bg-white p-4 rounded-lg shadow-md">
+                    {/* <div className="overflow-x-auto bg-white p-4 rounded-lg shadow-md"> */}
                         <table className="min-w-full bg-white rounded-lg hidden md:table">
                             <thead className="bg-gradient-to-r from-purple-600 to-purple-800 text-white">
                                 <tr>
@@ -66,7 +66,7 @@ function SponsorShip() {
                                 <p className="text-center text-gray-600">No data available</p>
                             )}
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         </div>
