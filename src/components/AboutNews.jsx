@@ -21,7 +21,7 @@ const AboutNews = (props) => {
   }, [apiUrl, confid]);
 
   return (
-    <div className="bg-transparent container max-w-screen-lg flex flex-col items-center mx-auto px-4 sm:px-8 py-10">
+    <div className="bg-transparent container max-w-screen-lg flex flex-col items-center mx-auto sm:px-8 py-10">
       <h2 className="text-3xl sm:text-4xl font-sans font-bold text-gray-950 mb-4">News</h2>
       <Separator />
       <div
