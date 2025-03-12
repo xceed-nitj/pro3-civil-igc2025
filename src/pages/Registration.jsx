@@ -54,7 +54,7 @@ function RegistrationFee() {
             </div>
 
             {/* Section with Background Gradient */}
-            <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 lg:py-16">
+            <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 mt-4 md:mt-8 lg:py-16">
                 <div className="container mx-auto px-4 lg:px-8">
                     <div className="bg-white p-6 rounded-lg shadow-2xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
@@ -99,12 +99,20 @@ function RegistrationFee() {
                         </p>
                     </div>
                 </div>
+
+                <div className="flex flex-col items-center space-y-4 mt-6">
+                            <a href="https://meteor.springer.com/IGC2025" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-6 py-3 text-center text-white bg-pink-600 hover:bg-blue-700 rounded-lg shadow-md transition duration-300">
+                                Paper Submission Link
+                            </a>
+                        </div>
             </div>
 
             {/* Footer */}
+
             <Footer />
         </>
     );
 }
 
 export default RegistrationFee;
+
