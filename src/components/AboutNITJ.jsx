@@ -1,4 +1,4 @@
-import Separator from "./common/Separator";
+// import Separator from "./common/Separator";
 import axios from "axios";
 import getEnvironment from "../getenvironment";
 import { useState, useEffect } from "react";
@@ -30,7 +30,7 @@ function AboutNITJ(props) {
             <div className="w-full md:w-[700px] px-4 lg:w-3/5 lg:max-w-full">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
                     About NITJ        </h2>
-                <Separator />
+                {/* <Separator /> */}
                 <p className="text-base  text-justify font-sans font-base text-gray-800">
 
                     {data ? <div dangerouslySetInnerHTML={{ __html: data.about[3].description }} /> : <div ></div>}
@@ -40,9 +40,9 @@ function AboutNITJ(props) {
             <div className="w-full md:w-[700px] lg:w-2/5 lg:max-w-[450px] px-4 mt-10 lg:mt-0 mx-auto lg:px-5 ">
 
                 <h2 className="text-4xl font-sans font-bold  text-gray-950  ">
-                    About the Department
+                About IGC chapter
                 </h2>
-                <Separator />
+                {/* <Separator /> */}
                 <p className="text-base  text-justify font-sans font-base text-gray-800">
                     {data ? <div dangerouslySetInnerHTML={{ __html: data.about[4].description }} /> : <div ></div>}
 

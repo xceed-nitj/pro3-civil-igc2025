@@ -7,6 +7,7 @@ import SponsorShip from "../components/Sponsorship";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
 import About from '../components/About';
+import About2 from '../components/About2';
 import { useEffect } from "react";
 
 function Home(props) {
@@ -44,6 +45,7 @@ function Home(props) {
       <div className="bg-white">
         {/* <div className="container mx-auto"> */}
           <About confid={props.confId} />
+          <About2 confid={props.confId} />
           <Slider confid={props.confId} />
           <Timeline confid={props.confId} />
           <OurEvents confid={props.confId} />
