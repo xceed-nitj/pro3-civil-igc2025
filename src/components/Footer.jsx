@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Left Image Section */}
         <div className="relative block h-32 lg:col-span-2 lg:h-full">
           <img
-            src="public/civildept.jpg"
+            src="/civildept.jpg"
             alt="NIT Jalandhar"
             className="absolute inset-0 h-full w-full object-cover"
           />
