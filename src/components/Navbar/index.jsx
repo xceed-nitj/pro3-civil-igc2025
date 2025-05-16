@@ -58,7 +58,7 @@ const NavLinks = ({ onClose }) => {
           className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
           onClick={onClose}
         >
-          REGISTER
+          REGISTRATION
         </NavLink>
       </div>
       <div className="flex flex-row">
