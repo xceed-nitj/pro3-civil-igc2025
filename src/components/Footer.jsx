@@ -122,7 +122,7 @@ const Footer = () => {
                 <img
                   src="https://s01.flagcounter.com/count2/SENi/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_VISITORS/labels_1/pageviews_1/flags_0/percent_0/"
                   alt="Flag Counter"
-                  className="w-[100px] lg:w-[350px] border-2"
+                  className="w-[250px] lg:w-[450px] border-2"
                 />
               </a>
             </div>
