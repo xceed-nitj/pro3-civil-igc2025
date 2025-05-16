@@ -26,7 +26,7 @@ const AboutNews = (props) => {
       <Separator />
       <div
         id="news"
-        className="w-full sm:max-w-2xl min-h-[150px] max-h-[200px] overflow-auto bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 rounded-xl p-4 mt-4"
+        className="w-full sm:max-w-2xl min-h-[300px] max-h-[400px] overflow-auto bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 rounded-xl p-4 mt-4"
       >
         <div
           className={`space-y-4 ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"}`}
