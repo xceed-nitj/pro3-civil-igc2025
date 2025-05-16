@@ -65,7 +65,7 @@ const Events = () => {
           ))
         ) : (
           <p className="text-center text-gray-500">
-            No events available for this day.
+            To be updated soon...
           </p>
         )}
       </div>
