@@ -83,7 +83,7 @@ const HeroSection = (props) => {
         {/* <img src="logo4.jpg" alt="Logo 4" className="h-16 w-16 object-contain" /> */}
       </div>
         <p className="date text-pink-600 font-semibold text-xl mt-2 md:text-2xl">{data ? formatDate(data.confStartDate) : " "} - {data ? formatDate(data.confEndDate) : " "} | NITJ</p>
-        <p className="ii text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-black">INDIAN GEOTECHNICL CONFERENCE</p>
+        <p className="ii text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-black">INDIAN GEOTECHNICAL CONFERENCE</p>
         <p className="chem text-xl md:text-2xl font-bold text-black">on</p>
         <p className="chem text-1xl md:text-2xl font-bold text-black">Geotechnical Practices for</p>
         <p className="chem text-1xl md:text-2xl font-bold text-black">Innovations and Sustainability</p>
