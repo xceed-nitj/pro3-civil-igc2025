@@ -2,6 +2,7 @@ import Separator from "./common/Separator";
 
 function SponsorShip() {
     const data1 = [
+         { category: "Sponsor", fee: "15.00", delegates: "7", freeAd: "Full page: Color", corporatePresentation: "Yes", exhibitionSpace: "18'x9'" },
         { category: "Platinum", fee: "10.00", delegates: "6", freeAd: "Full page: Color", corporatePresentation: "Yes", exhibitionSpace: "18'x9'" },
         { category: "Diamond", fee: "5.00", delegates: "4", freeAd: "Full page: Color", corporatePresentation: "Yes", exhibitionSpace: "9'x9'" },
         { category: "Gold", fee: "2.5", delegates: "3", freeAd: "Full page: Color", corporatePresentation: "NA", exhibitionSpace: "NA" },
