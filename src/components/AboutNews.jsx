@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Separator from "./common/Separator"; // Adjust the path based on where your Separator component is located
-import getEnvironment from "../getenvironment"; // Adjust the path based on where getEnvironment is defined
+import Separator from "./common/Separator";
+import getEnvironment from "../getenvironment";
 
 const AboutNews = (props) => {
   const apiUrl = getEnvironment();
@@ -21,12 +21,11 @@ const AboutNews = (props) => {
   }, [apiUrl, confid]);
 
   return (
-    <div className="bg-transparent container max-w-screen-lg flex flex-col items-center mx-auto sm:px-8 py-10">
-      <h2 className="text-3xl sm:text-4xl font-sans font-bold text-gray-950 mb-4">News</h2>
+    <div className="bg-transparent container max-w-screen-lg flex flex-col items-center mx-auto sm:px-8 pt-2">
       <Separator />
       <div
         id="news"
-        className="w-full sm:max-w-2xl min-h-[300px] max-h-[400px] overflow-auto bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 rounded-xl p-4 mt-4"
+        className="w-full sm:max-w-2xl min-h-[300px] max-h-[400px] overflow-auto bg-gradient-to-r from-[#12105F] via-purple-800 to-purple-800 rounded-xl p-4 mt-2"
       >
         <div
           className={`space-y-4 ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"}`}
@@ -39,7 +38,7 @@ const AboutNews = (props) => {
                 <div className="relative p-4 my-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50 bg-white space-y-4 border-solid border-2 border-amber-400">
                   <div className="w-2 h-2 animate-ping bg-accent-600 absolute -left-1 -top-1 rounded-full"></div>
                   <div className='flex flex-row items-center justify-between'>
-                    <p className="text-base font-medium text-accent-600">{item.title}</p>
+                    <p className="text-base font-medium text-accent-600 underline underline-offset-2">{item.title}</p>
                     {item.new && (
                       <span className='flex flex-row items-center animate-bounce'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-5 stroke-amber-400">
