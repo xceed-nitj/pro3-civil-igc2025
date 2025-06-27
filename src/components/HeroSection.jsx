@@ -77,11 +77,11 @@ const HeroSection = (props) => {
        {/* Content Section */}
       <div className="content flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0 my-6">
       <div className="flex justify-center gap-6 md:my-4 md:mx-24">
-        <img src="nitj.png" alt="Logo 1" className="h-16 w-16 object-contain" />
-        <img src="igs.jpg" alt="Logo 2" className="h-16 w-16 object-contain" />
-        <img src="spring.png" alt="Logo 3" className="h-16 object-contain" />
-        {/* <img src="logo4.jpg" alt="Logo 4" className="h-16 w-16 object-contain" /> */}
-      </div>
+  <img src="nitj.png" alt="Logo 1" className="h-16 object-contain" />
+  <img src="igs.jpg" alt="Logo 2" className="h-16 object-contain" />
+  <img src="spring.png" alt="Logo 3" className="h-16 object-contain" />
+</div>
+
         <p className="date text-pink-600 font-semibold text-xl mt-2 md:text-2xl">{data ? formatDate(data.confStartDate) : " "} - {data ? formatDate(data.confEndDate) : " "} | NITJ</p>
         <p className="ii text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-black">INDIAN GEOTECHNICAL CONFERENCE</p>
         <p className="chem text-xl md:text-2xl font-bold text-black">on</p>
