@@ -27,6 +27,14 @@ function Sponsors() {
     //     { category: 'Banner of each event', price: 25000 },
     // ];
     const sponsorshipData = [
+         { 
+            category: "Title Sponsor", 
+            fee: "15.00", 
+            delegates: "7", 
+            freeAd: "Full page: Color", 
+            corporatePresentation: "Yes", 
+            exhibitionSpace: "18'x9'" 
+        },
         { 
             category: "Platinum", 
             fee: "10.00", 
