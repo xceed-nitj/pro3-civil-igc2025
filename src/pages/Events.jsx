@@ -136,11 +136,11 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Separator from "../components/common/Separator"; // Optional: Add Separator if it aligns with your theme
 
-const data = [
-  { dimension: '6m x 6m (Central Hall)', price: 100000 },
-  { dimension: '3m x 3m', price: 30000 },
-  { dimension: '3m x 2m', price: 25000 },
-];
+// const data = [
+//   { dimension: '6m x 6m (Central Hall)', price: 100000 },
+//   { dimension: '3m x 3m', price: 30000 },
+//   { dimension: '3m x 2m', price: 25000 },
+// ];
 
 const conferenceThemes = [
   "Foundations – Shallow and Deep",
@@ -190,7 +190,7 @@ function Events() {
               ))}
             </ul>
 
-            <section className="mb-8 p-4 bg-white shadow-md rounded-lg">
+            {/* <section className="mb-8 p-4 bg-white shadow-md rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Exhibition</h3>
               <p className="text-base text-justify font-sans text-gray-800 mb-4">
                 An exhibition of Geotechnical Engineering and allied fields will feature equipment,
@@ -215,7 +215,7 @@ function Events() {
                   </tbody>
                 </table>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>
