@@ -9,10 +9,75 @@ const activeClassName = "selected navlink";
 const activeStyleCallback = ({ isActive }) =>
   isActive ? activeClassName : "navlink";
 
+// const NavLinks = ({ onClose }) => {
+//   return (
+//     <div className="bg-violet-900 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 -mt-2">
+//       <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10">
+//         <NavLink to="/" className={activeStyleCallback} onClick={onClose} style={{ color: 'white' }}>
+//           HOME
+//         </NavLink>
+//         <NavLink to="/events" className={activeStyleCallback} onClick={onClose} style={{ color: 'white' }}>
+//           EVENTS
+//         </NavLink>
+//         <NavLink
+//           to="/sponsorship"
+//           className={activeStyleCallback}
+//           onClick={onClose}
+//           style={{ color: 'white' }}
+//         >
+//           SPONSORS
+//         </NavLink>
+//         <NavLink
+//           to="/committee"
+//           className={activeStyleCallback}
+//           onClick={onClose}
+//           style={{ color: 'white' }}
+//         >
+//           COMMITTEES
+//         </NavLink>
+//         <NavLink
+//           to="/location"
+//           className={activeStyleCallback}
+//           onClick={onClose}
+//           style={{ color: 'white' }}
+//         >
+//           LOCATION
+//         </NavLink>
+//         <NavLink
+//           to="/accommodation"
+//           className={activeStyleCallback}
+//           onClick={onClose}
+//           style={{ color: 'white' }}
+//         >
+//           ACCOMMODATION
+//         </NavLink>
+//       </div>
+//       <div className="mt-0 md:mt-0">
+//       <NavLink
+//           to="/registration"
+//           className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
+//           onClick={onClose}
+//         >
+//           REGISTRATION
+//         </NavLink>
+//       </div>
+//       <div className="flex flex-row">
+//         <div className="contact1 flex bg-violet-900 items-center text-white absolute right-4 top-5 block md:hidden">
+//           <FontAwesomeIcon icon={faPhone} />
+//           <p className="ml-2">+91 82659-99739</p>
+//         </div>
+//         <div className="contact2 bg-violet-900 flex items-center text-white absolute right-4 top-10 block md:hidden">
+//           <FontAwesomeIcon icon={faEnvelope} />
+//           <p className="ml-2 whitespace-nowrap">igsjalandharchapter@nitj.ac.in</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 const NavLinks = ({ onClose }) => {
   return (
-    <div className="bg-violet-900 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 -mt-2">
-      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10">
+    <div className="bg-violet-900 flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 -mt-2">
+      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8">
         <NavLink to="/" className={activeStyleCallback} onClick={onClose} style={{ color: 'white' }}>
           HOME
         </NavLink>
@@ -27,6 +92,15 @@ const NavLinks = ({ onClose }) => {
         >
           SPONSORS
         </NavLink>
+        <NavLink
+          to="/conference"
+          className={activeStyleCallback}
+          onClick={onClose}
+          style={{ color: 'white' }}
+        >
+          PRECONFERENCE
+        </NavLink>
+
         <NavLink
           to="/committee"
           className={activeStyleCallback}
@@ -53,7 +127,7 @@ const NavLinks = ({ onClose }) => {
         </NavLink>
       </div>
       <div className="mt-0 md:mt-0">
-      <NavLink
+        <NavLink
           to="/registration"
           className={`text-white bg-pink-500 text-center p-2 rounded-md transition-transform transform hover:scale-110 ${activeStyleCallback}`}
           onClick={onClose}

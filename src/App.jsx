@@ -8,9 +8,10 @@ import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
 import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
-
+import Conference from "./pages/Conference";
 import './App.css'
 import About from "./components/About";
+import Speakers from "./pages/speakers";
 function App() {
    const confid="66d7e4929bc0213cd4884ec4";
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/" element={<Home confId={confid} />} />
         <Route path="/" element={<About confId={confid} />} />
         <Route path="sponsorship" element={<Sponsors />} />
+        <Route path="Speakers" element={<Speakers />} />
+        <Route path="Conference" element={<Conference />} />
         <Route path="events" element={<Events />} />
         <Route path="location" element={<Location confid={confid}  />} />
         <Route path="accommodation" element={<Accommodation />} />
