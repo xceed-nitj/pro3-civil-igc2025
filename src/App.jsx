@@ -11,7 +11,7 @@ import CommonNews from "./pages/CommonNews";
 import Conference from "./pages/Conference";
 import './App.css'
 import About from "./components/About";
-import Speakers from "./pages/speakers";
+import Speakers from "./pages/Speakers";
 function App() {
    const confid="66d7e4929bc0213cd4884ec4";
   return (
