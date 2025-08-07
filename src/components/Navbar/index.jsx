@@ -76,8 +76,8 @@ const activeStyleCallback = ({ isActive }) =>
 // };
 const NavLinks = ({ onClose }) => {
   return (
-    <div className="bg-violet-900 flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 -mt-2">
-      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8">
+    <div className="bg-violet-900 flex flex-col md:flex-row space-y-0 md:space-y-0 md:space-x-4 -mt-2 ml-4">
+      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10">
         <NavLink to="/" className={activeStyleCallback} onClick={onClose} style={{ color: 'white' }}>
           HOME
         </NavLink>
@@ -92,6 +92,15 @@ const NavLinks = ({ onClose }) => {
         >
           SPONSORS
         </NavLink>
+         <NavLink
+          to="/speakers"
+          className={activeStyleCallback}
+          onClick={onClose}
+          style={{ color: 'white' }}
+        >
+          SPEAKERS
+        </NavLink>
+
         <NavLink
           to="/conference"
           className={activeStyleCallback}
@@ -190,9 +199,9 @@ const Nav = () => {
   return (
     <>
       <nav className="bg-violet-900 fixed w-full z-10 shadow-lg" style={{ margin: 0, padding: 0, top: 0, left: 0 }}>
-        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+        {/* <div className="container mx-auto flex justify-between items-center py-4 px-4">
           <div className="flex items-center">
-            <img src="logonav.png" alt="Logo" className="w-5 h-5 md:w-10 md:h-10 mr-2" />
+            <img src="logonav.png" alt="Logo" className="w-5 h-5 md:w-10 md:h-10 mr-2 -ml-8" />
             <span className="text-white font-bold text-lg">IGC-2025</span>
             <div className="hidden md:flex md:text-[14px] space-x-1 ml-40 mt-2">
               <NavLinks />
@@ -206,7 +215,40 @@ const Nav = () => {
               {isOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
             </button>
           </div>
-        </div>
+        </div> */}
+        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+  {/* Left Section: Logo + Text */}
+  <div className="flex items-center flex-nowrap mr-10">
+    <img
+      src="logonav.png"
+      alt="Logo"
+      className="w-5 h-5 md:w-10 md:h-10 mr-2 -ml-2"
+    />
+    <span className="text-white font-bold text-lg whitespace-nowrap">
+      IGC-2025
+    </span>
+  </div>
+
+  {/* Right Section: Desktop Nav Links */}
+  <div className="hidden md:flex md:text-[14px] space-x-1">
+    <NavLinks />
+  </div>
+
+  {/* Mobile View: Title + Hamburger */}
+  <div className="block md:hidden text-white font-bold text-lg">
+    {navTitle}
+  </div>
+  <div className="md:hidden">
+    <button onClick={toggleNavbar} className="p-2">
+      {isOpen ? (
+        <X size={24} className="text-white" />
+      ) : (
+        <Menu size={24} className="text-white" />
+      )}
+    </button>
+  </div>
+</div>
+
         <AnimatePresence>
           {isOpen && (
             <motion.div initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ type: "tween", duration: 0.5 }} className="fixed top-0 left-0 w-80 h-full bg-violet-900 shadow-lg z-20">
