@@ -2,7 +2,15 @@ import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Separator from "../components/common/Separator";
-
+const speakersData = [{
+    type: "PRECONFERENCE WORKSHOP SPEAKERS",
+    members: [
+      { name: "Prof. Robert Kayen, University of California, Berkeley, USA", image: "robert-kayen.jpg" },
+      { name: "Prof. G Madhavi Latha, IISc Bengaluru", image: "madhavi-latha.jpg" },
+      { name: "Prof. Neelima Satyam, IIT Indore", image: "neelima-satyam.jpg" },
+      { name: "Dr. Jaykumar Shukla, Principal Engineer, Geodynamics, Vadodara", image: "jaykumar-shukla.jpg" }
+    ]
+  }];
 function Conference() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,6 +34,33 @@ function Conference() {
             <h3 className="text-xl md:text-2xl font-semibold text-purple-800 mb-2">
               Earthquake Geotechnical Engineering
             </h3>
+
+            <br />
+                 {speakersData.map((section, index) => (
+              <div key={index} className="mb-8">
+                <h3 className="text-xl font-extrabold text-pink-600 mb-2 underline">
+                  {section.type}
+                </h3>
+                <Separator />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {section.members.map((speaker, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 bg-gray-100 rounded-md shadow hover:shadow-md transition flex items-start space-x-4"
+                    >
+                      <img
+                        src={`/speakers/${speaker.image}`}
+                        alt={speaker.name}
+                        className="w-16 h-16 object-cover rounded-full border-2 border-violet-600"
+                      />
+                      <p className="text-gray-800 text-base font-medium">
+                        {speaker.name}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
             <p className="text-gray-700 text-base font-medium mb-4">
               <strong>Date:</strong> 17th December 2025
             </p>

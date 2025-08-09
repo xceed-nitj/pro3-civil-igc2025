@@ -16,7 +16,7 @@ const speakersData = [
     type: "KEYNOTE SPEAKERS",
     members: [
       { name: "Prof. Krishna R Reddy, UIC, USA", image: "krishna-reddy.jpg" },
-      { name: "Prof. Robert Kane, University of Berkeley, USA", image: "robert-kane.jpg" },
+      { name: "Prof. Robert Kayen, University of California, Berkeley, USA", image: "robert-kane.jpg" },
       { name: "Prof. Gopal Madhabhushi, University of Cambridge, UK", image: "gopal-madhabhushi.jpg" },
       { name: "Prof. Dipanjan Basu, University of Waterloo, Canada", image: "dipanjan-basu.jpg" },
       { name: "Dr. Sanjay Shukla, Edith Cowan University, Australia", image: "sanjay-shukla.jpg" },
@@ -48,15 +48,6 @@ const speakersData = [
       { name: "Dr. B Janki Ramaiah, Associate Professor, IIT Tirupati", image: "janki-ramaiah.jpg" },
       { name: "Dr. P V Divya, Associate Professor, IIT Palakkad", image: "p-v-divya.jpg" },
       { name: "Ms. Annapoorni Iyer, Engosym Consultants", image: "annapoorni-iyer.jpg" }
-    ]
-  },
-  {
-    type: "EMINENT SPEAKERS",
-    members: [
-      { name: "Prof. Robert Kayen, University of Berkeley, USA", image: "robert-kayen.jpg" },
-      { name: "Prof. G Madhavi Latha, IISc Bengaluru", image: "madhavi-latha.jpg" },
-      { name: "Prof. Neelima Satyam, IIT Indore", image: "neelima-satyam.jpg" },
-      { name: "Dr. Jaykumar Shukla, Principal Engineer, Geodynamics, Vadodara", image: "jaykumar-shukla.jpg" }
     ]
   }
 ];
