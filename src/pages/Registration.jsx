@@ -70,8 +70,8 @@ function RegistrationFee() {
                                 <thead className="bg-gradient-to-r from-purple-600 to-purple-800 text-white">
                                     <tr>
                                         <th className="p-3 text-left text-xs md:text-sm font-semibold">Delegate Category</th>
-                                        <th className="p-3 text-left text-xs md:text-sm font-semibold">Upto 31.10.2025</th>
-                                        <th className="p-3 text-left text-xs md:text-sm font-semibold">After 31.10.2025 Upto 15.12.2025</th>
+                                        <th className="p-3 text-left text-xs md:text-sm font-semibold">Upto 15.11.2025</th>
+                                        <th className="p-3 text-left text-xs md:text-sm font-semibold">After 15.11.2025 Upto 15.12.2025</th>
                                         <th className="p-3 text-left text-xs md:text-sm font-semibold">After 15.12.2025</th>
                                         <th className="p-3 text-left text-xs md:text-sm font-semibold">Foreign Delegates (USD)</th>
                                     </tr>
