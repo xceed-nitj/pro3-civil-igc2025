@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
 import Conference from "./pages/Conference";
+import Travel from "./pages/Travel";
 import './App.css'
 import About from "./components/About";
 import Speakers from "./pages/Speakers";
@@ -26,6 +27,7 @@ function App() {
         <Route path="speakers" element={<Speakers />} />
         <Route path="conference" element={<Conference />} />
         <Route path="events" element={<Events />} />
+        <Route path="travel" element={<Travel />} />
         <Route path="location" element={<Location confid={confid}  />} />
         <Route path="accommodation" element={<Accommodation />} />
         <Route path="souvenir" element={<Souvenir />} />
