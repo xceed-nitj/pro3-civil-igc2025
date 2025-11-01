@@ -34,6 +34,7 @@ const speakersData = [
     members: [
       { name: "Prof. Milind V Khire, University of North Carolina, Charlotte, USA", image: "milind-khire.jpg" },
       { name: "Dr. N Ravichandran, Associate Professor, Clemson University, USA", image: "n-ravichandran.jpg" },
+      { name: "Dr.Sanjay Nimbalkar,Associate Professor,University of Technology Sydney, Australia", image: "sanjay-nimbalkar.jpg" },
       { name: "Prof. R S Jakka, IIT Roorkee", image: "r-s-jakka.jpg" },
       { name: "Prof. Ravi K Sharma, NIT Hamirpur", image: "ravi-k-sharma.jpg" },
       { name: "Mr. Ravi Sundaram, Director, Cengrs Geotechnica", image: "ravi-sundaram.jpg" },
