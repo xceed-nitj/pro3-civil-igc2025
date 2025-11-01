@@ -10,6 +10,7 @@ function Accommodation() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Hotel Data (rates)
   const hotelData = {
     "WJ Grand Hotel": [
       {
@@ -64,49 +65,50 @@ function Accommodation() {
         specialDouble: "INR 15000 + taxes",
       },
     ],
-
-    "Golden Tulip": [],
-    "Best Western Plus Jalandhar": [],
-    "The Maya": [],
-    "The Inn": [],
-    "Classic": [],
-    "Sarovar Portico": [],
-    "President": [],
-    "Residency": [],
-    "Ambassador Hotel": [],
-    "Dolphin": [],
-    "Ramada Encore": [],
-    "Ramada Wyndham": [],
-    "Leo Fort": [],
-    "Aveda Kamal Palace": [],
-    "Comfort Inn": [],
-    "Citadines": [],
-    "Country Inn and Suites": [],
-    "Sky Lark": [],
-    "Down Town": [],
-    "Mariton Hotel": [],
-    "Days Hotel": [],
-    "Hotel Skylark": [],
-    "The Maya Hotel": [],
-    "Hotel Dolphin": [],
-    "Hotel Majestic": [],
-    "Hotel Shangri-La": [],
-    "Hotel Sekhon Grand": [],
-    "Hotel City Hub": [],
-    "Hotel Residency": [],
-    "Hotel Ramada City Centre": [],
   };
 
-  const hotelList = Object.keys(hotelData);
+  // ✅ Updated Hotel Links
+  const hotelLinks = {
+    "WJ Grand Hotel": "https://www.wjgrandhotel.com/",
+    "Radisson Jalandhar": "https://www.radissonhotels.com/en-us/hotels/radisson-jalandhar",
+    "Golden Tulip Jalandhar": "https://jalandhar.goldentulip.com/en-us/",
+    "Best Western Plus Jalandhar": "https://www.bestwestern.com/en_US/book/hotels-in-jalandhar/best-western-plus-jalandhar/",
+    "The Maya Hotel": "https://mayahotelsindia.com/",
+    "Sarovar Portico, Jalandhar": "https://www.sarovarhotels.com/sarovar-portico-jalandhar/",
+    "Ramada Encore (Wyndham)": "https://www.wyndhamhotels.com/ramada/jalandhar-india",
+    "Comfort Inn (Choice Hotels page)": "https://www.choicehotels.com/india/hotels/comfort-inn-jalandhar",
+    "Hotel Majestic Grand": "http://www.majesticgrandhotel.com/",
+    "Hotel Shangri-La (Jalandhar)": "https://www.makemytrip.com/hotels/jalandhar_shangrila_hotel-details-jalandhar.html",
+    "Hotel Sekhon Grand": "https://sekhongrand.in/",
+    "Hotel City Hub": "https://www.tripadvisor.in/Hotel_Review-g488276-d12860792-Reviews-The_Inn_by_Vivo_Hotels-Jalandhar_Jalandhar_District_Punjab.html",
+    "Hotel Residency": "https://www.hotelresidency.co.in/",
+    "Ambassador Hotel": "http://www.ambassadorhoteljalandhar.com/",
+    "Hotel Dolphin": "http://www.hoteldolphin.com/",
+    "Leo Fort": "http://www.leoforthotel.com/",
+    "Aveda Kamal Palace": "http://hotelkamalpalace.com/",
+    "Citadines (chain)": "https://www.citadines.com/",
+    "Country Inn & Suites (chain / Radisson brand)": "https://www.radissonhotels.com/",
+    "Sky Lark / Skylark": "https://www.tripadvisor.in/Hotel_Review-g488276-d1179667-Reviews-Skylark_Hotel-Jalandhar_Jalandhar_District_Punjab.html",
+    "Down Town": "",
+    "Mariton Hotel": "",
+    "Days Hotel (Jalandhar)": "https://www.wyndhamhotels.com/days-inn/jalandhar-india/days-hotel-jalandhar-jyoti-chowk/overview",
+    "Hotel Skylark": "https://www.tripadvisor.in/Hotel_Review-g488276-d1179667-Reviews-Skylark_Hotel-Jalandhar_Jalandhar_District_Punjab.html",
+    "The Inn": "https://www.tripadvisor.in/Hotel_Review-g488276-d12860792-Reviews-The_Inn_by_Vivo_Hotels-Jalandhar_Jalandhar_District_Punjab.html",
+    "Classic": "",
+    "Ramada Wyndham (duplicate chain link)": "https://www.wyndhamhotels.com/",
+    "Best Western (other local listing / Summerlea)": "https://www.bestwestern.com/en_US/book/hotels-in-jalandhar/",
+    "Golden Tulip (alternate listing / Sarovar page)": "https://www.sarovarhotels.com/golden-tulip-jalandhar/",
+    "Hotel Majestic / other local hotels": "http://www.majesticgrandhotel.com/",
+  };
+
+  const hotelList = Object.keys(hotelLinks);
 
   return (
     <>
-      {/* Navbar */}
       <div className="top-0 w-screen z-40 text-white">
         <Navbar />
       </div>
 
-      {/* Main */}
       <div className="bg-gradient-to-r from-[#12105F] to-purple-800 via-purple-800 py-12 lg:py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="bg-white p-6 rounded-lg shadow-2xl mt-5">
@@ -118,57 +120,52 @@ function Accommodation() {
 
             <div className="text-base text-justify font-sans text-gray-800 mb-6">
               <p className="mb-4">
-                Please note that accommodation is not included in the conference
-                fee, and delegates are responsible for their own accommodation.
-                A list of nearby hotels and paid homestays will be available on
-                the conference website.
+                Please note that accommodation is not included in the conference fee, and delegates are responsible for their own accommodation.
+                A list of nearby hotels and paid homestays will be available on the conference website.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">
                 Hotels in and around Jalandhar (10–15 km from NIT Jalandhar)
               </h3>
 
-              {/* Hotel names table (compact) */}
+              {/* Hotel Table */}
               <div className="overflow-x-auto mb-6">
                 <table className="w-full table-auto border-collapse border border-gray-300">
                   <thead>
                     <tr className="bg-gray-200 text-gray-700">
-                      <th className="border border-gray-300 px-4 py-2 text-left">
-                        Hotel Name
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">
-                        Hotel Name
-                      </th>
+                      <th className="border border-gray-300 px-4 py-2 text-left">#</th>
+                      <th className="border border-gray-300 px-4 py-2 text-left">Hotel Name</th>
+                      <th className="border border-gray-300 px-4 py-2 text-left">Website</th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-800">
-                    {/* split list into two columns for display */}
-                    {Array.from({ length: Math.ceil(hotelList.length / 2) }).map(
-                      (_, rowIndex) => {
-                        const left = hotelList[rowIndex];
-                        const right = hotelList[rowIndex + Math.ceil(hotelList.length / 2)];
-                        return (
-                          <tr key={rowIndex}>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {left}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {right ?? ""}
-                            </td>
-                          </tr>
-                        );
-                      }
-                    )}
+                    {hotelList.map((name, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-300 px-4 py-2">{index + 1}</td>
+                        <td className="border border-gray-300 px-4 py-2 font-medium">{name}</td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {hotelLinks[name] ? (
+                            <a
+                              href={hotelLinks[name]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 underline"
+                            >
+                              Visit Website
+                            </a>
+                          ) : (
+                            <span className="text-gray-500">Not Available</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
 
               {/* Dropdown */}
               <div className="mb-6">
-                <label
-                  htmlFor="hotelSelect"
-                  className="block text-lg font-semibold text-gray-900 mb-2"
-                >
+                <label htmlFor="hotelSelect" className="block text-lg font-semibold text-gray-900 mb-2">
                   View Special Tariff Details
                 </label>
 
@@ -177,7 +174,6 @@ function Accommodation() {
                   className="border border-gray-400 rounded-lg p-2 w-full md:w-1/2 focus:ring-2 focus:ring-purple-600"
                   value={selectedHotel}
                   onChange={(e) => setSelectedHotel(e.target.value)}
-                  aria-label="Select hotel to view rates"
                 >
                   <option value="">-- Select a Hotel --</option>
                   {hotelList.map((h) => (
@@ -188,68 +184,36 @@ function Accommodation() {
                 </select>
               </div>
 
-              {/* Rates area */}
-              {selectedHotel ? (
-                <div
-                  className="overflow-x-auto mb-8 transition-all duration-300"
-                  aria-live="polite"
-                >
+              {/* Rates Table */}
+              {selectedHotel && (
+                <div className="overflow-x-auto mb-8 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {selectedHotel} — Tariff Details
                   </h3>
 
-                  {/* choose table format depending on hotel data structure */}
                   {selectedHotel === "WJ Grand Hotel" ? (
                     <table className="w-full table-auto border-collapse border border-gray-300 text-gray-800">
                       <thead>
                         <tr className="bg-cyan-100 text-gray-900 font-semibold">
-                          <th className="border border-gray-300 px-4 py-2">
-                            Room Type
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Published Rate (Single)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Published Rate (Double)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            NIT Corporate Rate CPAI (Single)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            NIT Corporate Rate CPAI (Double)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            NIT Corporate Rate MAP (Single)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            NIT Corporate Rate MAP (Double)
-                          </th>
+                          <th className="border border-gray-300 px-4 py-2">Room Type</th>
+                          <th className="border border-gray-300 px-4 py-2">Published Rate (Single)</th>
+                          <th className="border border-gray-300 px-4 py-2">Published Rate (Double)</th>
+                          <th className="border border-gray-300 px-4 py-2">CPAI (Single)</th>
+                          <th className="border border-gray-300 px-4 py-2">CPAI (Double)</th>
+                          <th className="border border-gray-300 px-4 py-2">MAP (Single)</th>
+                          <th className="border border-gray-300 px-4 py-2">MAP (Double)</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {hotelData["WJ Grand Hotel"].map((row) => (
-                          <tr key={row.type}>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.type}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.publishedSingle}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.publishedDouble}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.cpaiSingle}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.cpaiDouble}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.mapSingle}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.mapDouble}
-                            </td>
+                        {hotelData["WJ Grand Hotel"].map((r) => (
+                          <tr key={r.type}>
+                            <td className="border px-4 py-2">{r.type}</td>
+                            <td className="border px-4 py-2">{r.publishedSingle}</td>
+                            <td className="border px-4 py-2">{r.publishedDouble}</td>
+                            <td className="border px-4 py-2">{r.cpaiSingle}</td>
+                            <td className="border px-4 py-2">{r.cpaiDouble}</td>
+                            <td className="border px-4 py-2">{r.mapSingle}</td>
+                            <td className="border px-4 py-2">{r.mapDouble}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -258,91 +222,30 @@ function Accommodation() {
                     <table className="w-full table-auto border-collapse border border-gray-300 text-gray-800">
                       <thead>
                         <tr className="bg-pink-100 text-gray-900 font-semibold">
-                          <th className="border border-gray-300 px-4 py-2">
-                            Room Type
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Published Tariff (Single)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Published Tariff (Double)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Special Tariff (Single)
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Special Tariff (Double)
-                          </th>
+                          <th className="border px-4 py-2">Room Type</th>
+                          <th className="border px-4 py-2">Published Tariff (Single)</th>
+                          <th className="border px-4 py-2">Published Tariff (Double)</th>
+                          <th className="border px-4 py-2">Special Tariff (Single)</th>
+                          <th className="border px-4 py-2">Special Tariff (Double)</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {hotelData["Radisson Jalandhar"].map((row) => (
-                          <tr key={row.type}>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.type}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.publishedSingle}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.publishedDouble}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.specialSingle}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              {row.specialDouble}
-                            </td>
+                        {hotelData["Radisson Jalandhar"].map((r) => (
+                          <tr key={r.type}>
+                            <td className="border px-4 py-2">{r.type}</td>
+                            <td className="border px-4 py-2">{r.publishedSingle}</td>
+                            <td className="border px-4 py-2">{r.publishedDouble}</td>
+                            <td className="border px-4 py-2">{r.specialSingle}</td>
+                            <td className="border px-4 py-2">{r.specialDouble}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   ) : (
-                    // Generic table for hotels with simple single/double rates or empty
-                    <table className="w-full table-auto border-collapse border border-gray-300 text-gray-800">
-                      <thead>
-                        <tr className="bg-gray-100 text-gray-900 font-semibold">
-                          <th className="border border-gray-300 px-4 py-2">
-                            Room Type
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Single Occupancy
-                          </th>
-                          <th className="border border-gray-300 px-4 py-2">
-                            Double Occupancy
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {(hotelData[selectedHotel] || []).length > 0 ? (
-                          hotelData[selectedHotel].map((row) => (
-                            <tr key={row.type}>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.type}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.single || row.publishedSingle || "-"}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.double || row.publishedDouble || "-"}
-                              </td>
-                            </tr>
-                          ))
-                        ) : (
-                          <tr>
-                            <td
-                              className="border border-gray-300 px-4 py-2"
-                              colSpan={3}
-                            >
-                              No tariff data available for this hotel.
-                            </td>
-                          </tr>
-                        )}
-                      </tbody>
-                    </table>
+                    <p className="text-gray-700">No tariff data available for this hotel.</p>
                   )}
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
         </div>
