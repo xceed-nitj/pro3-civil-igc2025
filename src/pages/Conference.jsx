@@ -1,16 +1,18 @@
-import { useEffect } from 'react';
+ import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Separator from "../components/common/Separator";
+
 const speakersData = [{
-    type: "PRECONFERENCE WORKSHOP SPEAKERS",
-    members: [
-      { name: "Prof. Robert Kayen, University of California, Berkeley, USA", image: "robert-kayen.jpg" },
-      { name: "Prof. G Madhavi Latha, IISc Bengaluru", image: "madhavi-latha.jpg" },
-      { name: "Prof. Neelima Satyam, IIT Indore", image: "neelima-satyam.jpg" },
-      { name: "Dr. Jaykumar Shukla, Principal Engineer, Geodynamics, Vadodara", image: "jaykumar-shukla.jpg" }
-    ]
-  }];
+  type: "PRECONFERENCE WORKSHOP SPEAKERS",
+  members: [
+    { name: "Prof. Robert Kayen, University of California, Berkeley, USA", image: "robert-kayen.jpg" },
+    { name: "Prof. G Madhavi Latha, IISc Bengaluru", image: "madhavi-latha.jpg" },
+    { name: "Prof. Neelima Satyam, IIT Indore", image: "neelima-satyam.jpg" },
+    { name: "Dr. Jaykumar Shukla, Principal Engineer, Geodynamics, Vadodara", image: "jaykumar-shukla.jpg" }
+  ]
+}];
+
 function Conference() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,7 +38,7 @@ function Conference() {
             </h3>
 
             <br />
-                 {speakersData.map((section, index) => (
+            {speakersData.map((section, index) => (
               <div key={index} className="mb-8">
                 <h3 className="text-xl font-extrabold text-pink-600 mb-2 underline">
                   {section.type}
@@ -61,6 +63,7 @@ function Conference() {
                 </div>
               </div>
             ))}
+
             <p className="text-gray-700 text-base font-medium mb-4">
               <strong>Date:</strong> 17th December 2025
             </p>
@@ -69,6 +72,18 @@ function Conference() {
               <p className="text-lg font-semibold text-gray-900">
                 Registration Fee: <span className="text-pink-600">Rs. 1200</span>
               </p>
+            </div>
+
+            {/* Registration Link */}
+            <div className="text-center mb-8">
+              <a
+                href="https://forms.gle/LCCmyz8AoaYGu9ve8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition duration-300"
+              >
+                Register Here
+              </a>
             </div>
 
             {/* <p className="text-base text-justify font-sans text-gray-800">
