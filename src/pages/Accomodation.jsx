@@ -10,7 +10,7 @@ function Accommodation() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Hotel Data (rates)
+  // ✅ Hotel Data (tariffs)
   const hotelData = {
     "WJ Grand Hotel": [
       {
@@ -63,6 +63,20 @@ function Accommodation() {
         publishedDouble: "INR 17000 + taxes",
         specialSingle: "INR 15000 + taxes",
         specialDouble: "INR 15000 + taxes",
+      },
+    ],
+
+    // ✅ Added Golden Tulip data (from uploaded image)
+    "Golden Tulip Jalandhar": [
+      {
+        type: "Deluxe",
+        specialSingle: "INR 4500 CPAI",
+        specialDouble: "INR 5100 CPAI",
+      },
+      {
+        type: "Premium",
+        specialSingle: "INR 5500 CPAI",
+        specialDouble: "INR 6100 CPAI",
       },
     ],
   };
@@ -235,6 +249,25 @@ function Accommodation() {
                             <td className="border px-4 py-2">{r.type}</td>
                             <td className="border px-4 py-2">{r.publishedSingle}</td>
                             <td className="border px-4 py-2">{r.publishedDouble}</td>
+                            <td className="border px-4 py-2">{r.specialSingle}</td>
+                            <td className="border px-4 py-2">{r.specialDouble}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  ) : selectedHotel === "Golden Tulip Jalandhar" ? (
+                    <table className="w-full table-auto border-collapse border border-gray-300 text-gray-800">
+                      <thead>
+                        <tr className="bg-yellow-100 text-gray-900 font-semibold">
+                          <th className="border border-gray-300 px-4 py-2">Room Category</th>
+                          <th className="border border-gray-300 px-4 py-2">Special Rate (Single)</th>
+                          <th className="border border-gray-300 px-4 py-2">Special Rate (Double)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {hotelData["Golden Tulip Jalandhar"].map((r) => (
+                          <tr key={r.type}>
+                            <td className="border px-4 py-2">{r.type}</td>
                             <td className="border px-4 py-2">{r.specialSingle}</td>
                             <td className="border px-4 py-2">{r.specialDouble}</td>
                           </tr>
