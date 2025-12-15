@@ -95,12 +95,12 @@ const HeroSection = (props) => {
         </div>
         <div className="button flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
           {/* Use Link component to navigate */}
-          <a
+          {/* <a
   href="https://meteor.springer.com/IGC2025"
   className="register bg-pink-500 px-6 text-white py-2 md:py-3 rounded-lg flex justify-center items-center hover:scale-110 transition-transform text-xl"
 >
   Register
-</a>
+</a> */}
 
           <Link to="/events" className="view bg-white text-pink-500 py-2 px-6 border border-pink-500 rounded-lg flex justify-center items-center hover:scale-110 transition-transform text-xl">
             View Details

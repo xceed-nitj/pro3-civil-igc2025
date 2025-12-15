@@ -98,16 +98,23 @@ function RegistrationFee() {
                             Note: The registration fee structure is valid for the mentioned timeframes. Ensure to register early for the best rates.
                         </p>
 
-                        {/* 🔽 Account Details Section */}
-                        <div className="mt-6 bg-white rounded-lg shadow-lg p-4 border border-gray-200">
-                            <h3 className="text-xl font-semibold text-pink-600 underline mb-2">Account Details</h3>
-                            <ul className="text-gray-800 text-base space-y-1 list-disc list-inside">
-                                <li><strong>Account No:</strong> 110256883181</li>
-                                <li><strong>Account Name:</strong> Indian Geotechnical Society Jalandhar Chapter</li>
-                                <li><strong>IFSC Code:</strong> CNRB0002945</li>
-                                <li><strong>MICR Code:</strong> 144015011</li>
-                            </ul>
+                        {/* 🔽 Scan & Pay QR Code Section */}
+                        <div className="mt-6 bg-white rounded-lg shadow-lg p-4 border border-gray-200 flex flex-col items-center">
+                            <h3 className="text-xl font-semibold text-pink-600 underline mb-4">
+                                Scan & Pay
+                            </h3>
+
+                            <img
+                                src="/qr/upi-qr.png"
+                                alt="UPI QR Code"
+                                className="w-56 h-56 object-contain border rounded-lg"
+                            />
+
+                            <p className="mt-3 text-sm text-gray-700 font-medium">
+                                UPI ID: <span className="font-semibold">333145189883181@cnrb</span>
+                            </p>
                         </div>
+
                     </div>
                 </div>
 
