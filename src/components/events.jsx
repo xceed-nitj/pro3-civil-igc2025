@@ -251,10 +251,17 @@ const Events = () => {
   "• Ground Improvement Techniques & Geosynthetics",  },
     {
       day: 1,
-      time: "18:00 onwards",
+      time: "16:20 – 18:00",
       title: "Poster Presentation – I",
       venue: "In front of AKAM Lecture Theatre",
       description: "Poster presentation session.",
+    },
+     {
+      day: 1,
+      time: "19:30 onwards",
+      title: "Dinner ",
+      venue: "SAC - Student Activity Center",
+      // description: "Poster presentation session.",
     },
 
   /* ================= DAY 2 : 19-12-2025 ================= */
